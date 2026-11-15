@@ -127,19 +127,17 @@ Record egress allowlists in `infra/` docs after first connection test.
 
 Create empty secret slots (values injected by security ops):
 
-```text
-nf/nonprod/salesforce/client_id
-nf/nonprod/salesforce/client_secret
-nf/nonprod/salesforce/refresh_token_or_jwt
-nf/nonprod/stripe/api_key
-nf/nonprod/stripe/webhook_secret
-nf/nonprod/netsuite/token_*
-nf/nonprod/zendesk/api_token
-nf/nonprod/forgeobserve/client_*
-nf/nonprod/device_registry/client_*
-nf/nonprod/snowflake/keypair
-nf/nonprod/demo_app/session_secret
-```
+- `nf/nonprod/salesforce/client_id`
+- `nf/nonprod/salesforce/client_secret`
+- `nf/nonprod/salesforce/refresh_token_or_jwt`
+- `nf/nonprod/stripe/api_key`
+- `nf/nonprod/stripe/webhook_secret`
+- `nf/nonprod/netsuite/token_*`
+- `nf/nonprod/zendesk/api_token`
+- `nf/nonprod/forgeobserve/client_*`
+- `nf/nonprod/device_registry/client_*`
+- `nf/nonprod/snowflake/keypair`
+- `nf/nonprod/demo_app/session_secret`
 
 ---
 

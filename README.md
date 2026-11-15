@@ -46,23 +46,23 @@ All branded SVGs live under **`diagrams/svg/`** only (inventory path). There is 
 | 04 | [`diagrams/svg/04-nexusforge-agentforce-runtime-trust.svg`](diagrams/svg/04-nexusforge-agentforce-runtime-trust.svg) | Agentforce runtime trust / allow-deny |
 | 05 | [`diagrams/svg/05-nexusforge-security-identity-boundaries.svg`](diagrams/svg/05-nexusforge-security-identity-boundaries.svg) | Security & identity boundaries |
 | 06 | [`diagrams/svg/06-nexusforge-deploy-topology.svg`](diagrams/svg/06-nexusforge-deploy-topology.svg) | Non-prod → UAT → production deploy topology |
+| 07 | [`diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg`](diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg) | MDM logical hierarchy |
+| 08 | [`diagrams/svg/08-nexusforge-data-lineage-path.svg`](diagrams/svg/08-nexusforge-data-lineage-path.svg) | Mandatory data lineage path |
+| 09 | [`diagrams/svg/09-nexusforge-subscription-sla-sequence.svg`](diagrams/svg/09-nexusforge-subscription-sla-sequence.svg) | Subscription consistency SLA sequence |
 
-Each diagram includes Salesforce + Informatica/IDMC corner stamps, engagement title, and fictional-customer disclaimer footer.
+Each diagram includes Salesforce + Informatica/IDMC corner stamps, engagement title, and fictional-customer disclaimer footer. No ASCII/text diagrams are used in this repository.
 
 ## Repo layout
 
-```text
-sf-idmc-nexusforge-technology/
-├── README.md                 ← this file
-├── branding/                 ← logo placeholders + swap instructions
-├── diagrams/svg/             ← six branded architecture SVGs
-├── demo-app/                 ← Account 360 + Agentforce simulator
-├── docs/                     ← architecture, pillars, deploy, acceptance
-├── salesforce/               ← force-app metadata + scripts
-├── idmc/                     ← cai, cdi, mdm, dq, catalog
-├── infra/                    ← terraform + scripts
-└── tests/                    ← integration + acceptance
-```
+- `README.md` — this file
+- `branding/` — logo placeholders + swap instructions
+- `diagrams/svg/` — branded architecture SVGs (01–09)
+- `demo-app/` — Account 360 + Agentforce simulator
+- `docs/` — architecture, pillars, deploy, acceptance
+- `salesforce/` — force-app metadata + scripts
+- `idmc/` — cai, cdi, mdm, dq, catalog
+- `infra/` — terraform + scripts
+- `tests/` — integration + acceptance
 
 ## Salesforce + Informatica branding
 

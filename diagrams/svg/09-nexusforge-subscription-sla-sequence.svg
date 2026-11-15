@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">NexusForge Systems — Subscription Consistency Sequence (&lt;5 min SLA)</title>
+  <desc id="desc">Stripe event through Informatica CAI, MDM, DQ, parallel Salesforce ForgeObserve Data Cloud updates, then Agentforce getEntitlements under five-minute SLA.</desc>
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F8FC"/>
+      <stop offset="100%" stop-color="#E8F1F8"/>
+    </linearGradient>
+    <marker id="arrow9" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#032D60"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="720" fill="url(#bg9)"/>
+
+  <rect x="24" y="18" width="150" height="36" rx="4" fill="#0176D3"/>
+  <text x="99" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Salesforce</text>
+  <rect x="186" y="18" width="170" height="36" rx="4" fill="#0B3B4D"/>
+  <text x="271" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Informatica IDMC</text>
+
+  <text x="700" y="88" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">NexusForge Systems — Agentic Customer &amp; Product Data Platform</text>
+  <text x="700" y="112" text-anchor="middle" fill="#0176D3" font-family="Arial, Helvetica, sans-serif" font-size="14">Subscription Consistency Sequence — &lt;5 minute SLA</text>
+
+  <!-- Step 1 -->
+  <rect x="80" y="150" width="220" height="70" rx="8" fill="#FFF4E5" stroke="#DD7A01" stroke-width="2"/>
+  <text x="190" y="180" text-anchor="middle" fill="#181818" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">1 · Stripe event</text>
+  <text x="190" y="202" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">subscription.updated</text>
+  <line x1="300" y1="185" x2="360" y2="185" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <!-- Step 2 -->
+  <rect x="365" y="150" width="280" height="70" rx="8" fill="#E6F4F1" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="505" y="180" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">2 · CAI validate</text>
+  <text x="505" y="202" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">+ correlation_id · &lt;30s</text>
+  <line x1="645" y1="185" x2="705" y2="185" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <!-- Step 3 -->
+  <rect x="710" y="150" width="280" height="70" rx="8" fill="#D9F2EC" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="850" y="180" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">3 · MDM Subscription</text>
+  <text x="850" y="202" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">match / survivorship</text>
+  <line x1="990" y1="185" x2="1050" y2="185" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <!-- Step 4 -->
+  <rect x="1055" y="150" width="260" height="70" rx="8" fill="#CFE8E2" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="1185" y="180" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">4 · DQ gate</text>
+  <text x="1185" y="202" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">status / quantity · &lt;90s</text>
+
+  <!-- Down to parallel -->
+  <line x1="1185" y1="220" x2="1185" y2="270" stroke="#032D60" stroke-width="2"/>
+  <line x1="250" y1="270" x2="1185" y2="270" stroke="#032D60" stroke-width="2"/>
+  <line x1="250" y1="270" x2="250" y2="300" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+  <line x1="700" y1="270" x2="700" y2="300" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+  <line x1="1100" y1="270" x2="1100" y2="300" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <text x="700" y="262" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">5 · Parallel fan-out</text>
+
+  <rect x="80" y="305" width="340" height="90" rx="8" fill="#EAF5FE" stroke="#0176D3" stroke-width="2"/>
+  <text x="250" y="340" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Salesforce Contract / Opp</text>
+  <text x="250" y="362" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">Tier / seats upsert · &lt;60s</text>
+  <text x="250" y="382" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">Sales Cloud · Service Cloud</text>
+
+  <rect x="530" y="305" width="340" height="90" rx="8" fill="#FFF4E5" stroke="#DD7A01" stroke-width="2"/>
+  <text x="700" y="340" text-anchor="middle" fill="#181818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">ForgeObserve entitlement API</text>
+  <text x="700" y="362" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">feature package · &lt;90s</text>
+  <text x="700" y="382" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">product control plane</text>
+
+  <rect x="980" y="305" width="340" height="90" rx="8" fill="#D8E6FE" stroke="#0176D3" stroke-width="2"/>
+  <text x="1150" y="340" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Data Cloud profile attrs</text>
+  <text x="1150" y="362" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">unified profile · &lt;120s</text>
+  <text x="1150" y="382" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">calculated insights ready</text>
+
+  <!-- Converge to Agentforce -->
+  <line x1="250" y1="395" x2="250" y2="450" stroke="#032D60" stroke-width="2"/>
+  <line x1="700" y1="395" x2="700" y2="450" stroke="#032D60" stroke-width="2"/>
+  <line x1="1150" y1="395" x2="1150" y2="450" stroke="#032D60" stroke-width="2"/>
+  <line x1="250" y1="450" x2="1150" y2="450" stroke="#032D60" stroke-width="2"/>
+  <line x1="700" y1="450" x2="700" y2="480" stroke="#032D60" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <rect x="420" y="485" width="560" height="80" rx="8" fill="#032D60"/>
+  <text x="700" y="520" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">6 · Agentforce getEntitlements</text>
+  <text x="700" y="544" text-anchor="middle" fill="#B3D4F5" font-family="Arial, Helvetica, sans-serif" font-size="12">Sees new tier · no payment tokens · end-to-end &lt;5 min median</text>
+
+  <rect x="80" y="590" width="1240" height="50" rx="6" fill="#FFFFFF" stroke="#0B3B4D"/>
+  <text x="700" y="620" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="12">Budget: Stripe→CAI &lt;30s · MDM+DQ &lt;90s · SF &lt;60s · ForgeObserve &lt;90s · Data Cloud &lt;120s · remainder buffer · Acceptance scenario 1</text>
+
+  <text x="700" y="675" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">Salesforce · Informatica (Informatica by Salesforce) engagement materials · NexusForge Systems is fictional for architecture demonstration · Not an endorsement by third parties</text>
+  <text x="700" y="697" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">Diagram 09 · Subscription SLA Sequence · diagrams/svg/09-nexusforge-subscription-sla-sequence.svg</text>
+</svg>

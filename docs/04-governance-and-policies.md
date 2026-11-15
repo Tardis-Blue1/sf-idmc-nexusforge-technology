@@ -142,16 +142,9 @@ Tags live in IDMC Catalog on columns/attributes and are enforced at CAI agent AP
 
 ### 6.1 Mandatory lineage path (pilot domains)
 
-```text
-Source system field
-  → IDMC CDI/CAI mapping
-  → MDM golden attribute
-  → DQ certification state
-  → Catalog data product version
-  → Salesforce / Data Cloud field
-  → Agentforce tool response / action
-  → Audit log (correlation_id)
-```
+![NexusForge mandatory data lineage path from source system through Informatica IDMC to Agentforce and audit](../diagrams/svg/08-nexusforge-data-lineage-path.svg)
+
+**Diagram:** [`diagrams/svg/08-nexusforge-data-lineage-path.svg`](../diagrams/svg/08-nexusforge-data-lineage-path.svg)
 
 ### 6.2 Completeness target
 

@@ -102,16 +102,9 @@ Define the master data domains, attributes, match/merge rules, survivorship, hie
 
 ## 4. Logical relationships
 
-```text
-Parent Account (Enterprise)
- ├── Billing Account (child)
- │     ├── Subscription / Entitlement ── Product/SKU
- │     └── Contact (bill-to)
- ├── Product Org (ForgeObserve) ←── mapped via crosswalk
- │     ├── Users (Contacts / Auth0)
- │     └── Devices (ForgeEdge serials)
- └── Opportunity / Case (engagement only)
-```
+![NexusForge MDM logical hierarchy — Parent Account, Billing Account, Product Org, Devices, and Salesforce engagement](../diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg)
+
+**Diagram:** [`diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg`](../diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg)
 
 Hierarchy rules:
 

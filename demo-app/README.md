@@ -32,19 +32,14 @@ Open `http://localhost:4173/` (serves `index.html`). Do not open the HTML file v
 
 ## Layout
 
-```text
-demo-app/
-├── index.html              # Account 360 + agent simulator
-├── package.json            # npm start / serve / python scripts
-├── README.md
-├── public/index.html       # Redirect note to ../index.html
-└── src/
-    ├── app.js
-    ├── styles/main.css
-    └── data/
-        ├── account-360.json
-        └── agent-scenarios.json
-```
+- `index.html` — Account 360 + agent simulator
+- `package.json` — npm start / serve / python scripts
+- `README.md`
+- `public/index.html` — redirect note to `../index.html`
+- `src/app.js`
+- `src/styles/main.css`
+- `src/data/account-360.json`
+- `src/data/agent-scenarios.json`
 
 ## Branding
 

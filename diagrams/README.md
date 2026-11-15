@@ -14,5 +14,10 @@ Inventory / prompt references to a root `svg/` directory mean this folder. Do no
 | `04-nexusforge-agentforce-runtime-trust.svg` | Agentforce runtime trust |
 | `05-nexusforge-security-identity-boundaries.svg` | Security & identity |
 | `06-nexusforge-deploy-topology.svg` | Deploy topology |
+| `07-nexusforge-mdm-logical-hierarchy.svg` | MDM logical hierarchy |
+| `08-nexusforge-data-lineage-path.svg` | Mandatory data lineage path |
+| `09-nexusforge-subscription-sla-sequence.svg` | Subscription consistency SLA sequence |
 
 Stamps: Salesforce + Informatica / IDMC. Titles include NexusForge Systems and Agentic Customer & Product Data Platform. Footers include the fictional-customer disclaimer.
+
+**Policy:** Do not use ASCII/text art diagrams anywhere in this repository. Embed SVGs from this folder instead.

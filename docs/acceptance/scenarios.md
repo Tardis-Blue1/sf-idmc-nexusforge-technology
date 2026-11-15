@@ -71,7 +71,7 @@ Prove Stripe subscription upgrade lands in Salesforce entitlement/contract field
 
 ### 1.5 Automation hook
 
-```text
+```bash
 tests/acceptance/test_scenario_01_subscription_upgrade.sh
 # asserts: median_lag_seconds < 300; agent_payload.has_token == false
 ```
@@ -122,7 +122,7 @@ Prove two Accounts (self-serve PLG + enterprise) merge under MDM survivorship; D
 
 ### 2.5 Automation hook
 
-```text
+```bash
 tests/acceptance/test_scenario_02_account_merge_device.sh
 # asserts: device.golden_account_id in surviving_set; case.account_id in surviving_set
 ```
@@ -171,7 +171,7 @@ Prove Agentforce / CAI **denies** raw Stripe payment token (Payment-restricted) 
 
 ### 3.5 Automation hook
 
-```text
+```bash
 tests/acceptance/test_scenario_03_token_deny.sh
 # asserts: response.status in {403,460_policy}; body contains no tok_; audit_row_exists
 ```
@@ -222,7 +222,7 @@ Prove firmware + serial mismatch is quarantined by DQ; agent escalates and canno
 
 ### 4.5 Automation hook
 
-```text
+```bash
 tests/acceptance/test_scenario_04_rma_dq_quarantine.sh
 # asserts: first_propose_rma == denied_dq; second_propose_rma == draft_created
 ```
@@ -277,7 +277,7 @@ Demonstrate operational **lineage** and **match-rate** dashboards delivered by I
 
 ### 5.6 Automation hook
 
-```text
+```bash
 tests/acceptance/test_scenario_05_lineage_matchrate.sh
 # asserts: lineage_completeness >= 95; match_rate_endpoint_ok; evidence_screenshots >= 3
 ```

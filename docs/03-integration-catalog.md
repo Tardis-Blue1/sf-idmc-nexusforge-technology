@@ -161,23 +161,15 @@ Catalog the event-driven and scheduled integration patterns that keep CRM, billi
 
 ## 6. Subscription consistency sequence (&lt;5 min SLA)
 
-```text
-Stripe event
-  → CAI validate + correlation_id
-  → MDM Subscription match/survivorship
-  → DQ gate (status/quantity validity)
-  → Parallel:
-       Salesforce Contract / related Opportunity fields
-       ForgeObserve entitlement API
-       Data Cloud profile attributes
-  → Agentforce getEntitlements sees new tier
-```
+![NexusForge subscription consistency sequence under five-minute SLA — Stripe through IDMC to Agentforce](../diagrams/svg/09-nexusforge-subscription-sla-sequence.svg)
 
 **Budget allocation (guidance):** Stripe→CAI &lt;30s; MDM+DQ &lt;90s; SF upsert &lt;60s; ForgeObserve &lt;90s; Data Cloud visibility &lt;120s; remainder buffer.
 
 Acceptance scenario 1 validates this path end-to-end.
 
-**Diagram:** [`diagrams/svg/03-nexusforge-data-flow-subscription-device.svg`](../diagrams/svg/03-nexusforge-data-flow-subscription-device.svg)
+**Diagrams:**
+- Sequence: [`diagrams/svg/09-nexusforge-subscription-sla-sequence.svg`](../diagrams/svg/09-nexusforge-subscription-sla-sequence.svg)
+- Broader CDC flow: [`diagrams/svg/03-nexusforge-data-flow-subscription-device.svg`](../diagrams/svg/03-nexusforge-data-flow-subscription-device.svg)
 
 ---
 

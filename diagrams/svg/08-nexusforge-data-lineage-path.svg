@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-labelledby="title desc">
+  <title id="title">NexusForge Systems — Mandatory Data Lineage Path</title>
+  <desc id="desc">End-to-end lineage from source system field through Informatica IDMC CDI/CAI, MDM, DQ, Catalog, Salesforce/Data Cloud, Agentforce, and audit log.</desc>
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F8FC"/>
+      <stop offset="100%" stop-color="#E8F1F8"/>
+    </linearGradient>
+    <marker id="arrow8" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#032D60"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="520" fill="url(#bg8)"/>
+
+  <rect x="24" y="18" width="150" height="36" rx="4" fill="#0176D3"/>
+  <text x="99" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Salesforce</text>
+  <rect x="186" y="18" width="170" height="36" rx="4" fill="#0B3B4D"/>
+  <text x="271" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Informatica IDMC</text>
+
+  <text x="700" y="88" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">NexusForge Systems — Agentic Customer &amp; Product Data Platform</text>
+  <text x="700" y="112" text-anchor="middle" fill="#0176D3" font-family="Arial, Helvetica, sans-serif" font-size="14">Mandatory Lineage Path — Source → Masters → Agents → Audit</text>
+
+  <!-- Flow boxes -->
+  <rect x="30" y="180" width="140" height="100" rx="8" fill="#FFF4E5" stroke="#DD7A01" stroke-width="2"/>
+  <text x="100" y="220" text-anchor="middle" fill="#181818" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Source system</text>
+  <text x="100" y="242" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">field</text>
+
+  <line x1="170" y1="230" x2="195" y2="230" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="200" y="180" width="140" height="100" rx="8" fill="#E6F4F1" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="270" y="220" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">IDMC CDI/CAI</text>
+  <text x="270" y="242" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">mapping</text>
+
+  <line x1="340" y1="230" x2="365" y2="230" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="370" y="180" width="140" height="100" rx="8" fill="#D9F2EC" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="440" y="220" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">MDM golden</text>
+  <text x="440" y="242" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">attribute</text>
+
+  <line x1="510" y1="230" x2="535" y2="230" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="540" y="180" width="140" height="100" rx="8" fill="#CFE8E2" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="610" y="220" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">DQ certification</text>
+  <text x="610" y="242" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">state</text>
+
+  <line x1="680" y1="230" x2="705" y2="230" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="710" y="180" width="150" height="100" rx="8" fill="#BFE0D8" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="785" y="212" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Catalog data</text>
+  <text x="785" y="232" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">product version</text>
+  <text x="785" y="254" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">contracted</text>
+
+  <line x1="860" y1="230" x2="885" y2="230" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="890" y="180" width="160" height="100" rx="8" fill="#EAF5FE" stroke="#0176D3" stroke-width="2"/>
+  <text x="970" y="212" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Salesforce /</text>
+  <text x="970" y="232" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Data Cloud field</text>
+  <text x="970" y="254" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">activation</text>
+
+  <line x1="1050" y1="230" x2="1075" y2="230" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="1080" y="160" width="150" height="70" rx="8" fill="#032D60"/>
+  <text x="1155" y="190" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Agentforce</text>
+  <text x="1155" y="210" text-anchor="middle" fill="#B3D4F5" font-family="Arial, Helvetica, sans-serif" font-size="11">tool / action</text>
+
+  <line x1="1155" y1="230" x2="1155" y2="270" stroke="#032D60" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <rect x="1080" y="275" width="150" height="70" rx="8" fill="#F3F3F3" stroke="#747474" stroke-width="2"/>
+  <text x="1155" y="305" text-anchor="middle" fill="#181818" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Audit log</text>
+  <text x="1155" y="325" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="11">correlation_id</text>
+
+  <rect x="30" y="360" width="1340" height="70" rx="8" fill="#FFFFFF" stroke="#0B3B4D"/>
+  <text x="700" y="390" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Pilot completeness: ≥95% of attributes in dp.customer.golden, dp.device.fleet, dp.entitlement.active show lineage to source in Catalog</text>
+  <text x="700" y="412" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="12">Governance executes at runtime — Catalog policy + DQ certification gate Agentforce tool reads</text>
+
+  <text x="700" y="470" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">Salesforce · Informatica (Informatica by Salesforce) engagement materials · NexusForge Systems is fictional for architecture demonstration · Not an endorsement by third parties</text>
+  <text x="700" y="492" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">Diagram 08 · Data Lineage Path · diagrams/svg/08-nexusforge-data-lineage-path.svg</text>
+</svg>

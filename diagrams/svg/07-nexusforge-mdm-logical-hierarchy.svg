@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="780" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">NexusForge Systems — MDM Logical Hierarchy</title>
+  <desc id="desc">Informatica MDM commercial and product hierarchy for NexusForge: Parent Account, Billing Account, Subscription, Product Org, Devices, and engagement objects.</desc>
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F8FC"/>
+      <stop offset="100%" stop-color="#E8F1F8"/>
+    </linearGradient>
+    <marker id="arrow7" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#032D60"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="780" fill="url(#bg7)"/>
+
+  <rect x="24" y="18" width="150" height="36" rx="4" fill="#0176D3"/>
+  <text x="99" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Salesforce</text>
+  <rect x="186" y="18" width="170" height="36" rx="4" fill="#0B3B4D"/>
+  <text x="271" y="41" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Informatica IDMC</text>
+  <text x="1380" y="40" text-anchor="end" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">PLACEHOLDER LOGOS — swap via branding/</text>
+
+  <text x="700" y="88" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">NexusForge Systems — Agentic Customer &amp; Product Data Platform</text>
+  <text x="700" y="114" text-anchor="middle" fill="#0176D3" font-family="Arial, Helvetica, sans-serif" font-size="15">MDM Logical Hierarchy — Informatica MDM + Salesforce engagement</text>
+
+  <!-- Parent -->
+  <rect x="480" y="150" width="440" height="70" rx="8" fill="#0B3B4D"/>
+  <text x="700" y="180" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Parent Account (Enterprise)</text>
+  <text x="700" y="202" text-anchor="middle" fill="#A8D5CC" font-family="Arial, Helvetica, sans-serif" font-size="12">Golden Account · commercial hierarchy root</text>
+
+  <!-- Connectors from parent -->
+  <line x1="700" y1="220" x2="700" y2="250" stroke="#032D60" stroke-width="2"/>
+  <line x1="280" y1="250" x2="1120" y2="250" stroke="#032D60" stroke-width="2"/>
+  <line x1="280" y1="250" x2="280" y2="280" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <line x1="700" y1="250" x2="700" y2="280" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <line x1="1120" y1="250" x2="1120" y2="280" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Billing Account -->
+  <rect x="60" y="280" width="440" height="70" rx="8" fill="#E6F4F1" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="280" y="310" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Billing Account (child)</text>
+  <text x="280" y="332" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="12">Stripe / NetSuite commercial entity</text>
+
+  <!-- Product Org -->
+  <rect x="480" y="280" width="440" height="70" rx="8" fill="#D9F2EC" stroke="#0B8A7A" stroke-width="2"/>
+  <text x="700" y="310" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Product Org (ForgeObserve)</text>
+  <text x="700" y="332" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="12">Mapped via MDM crosswalk</text>
+
+  <!-- Engagement -->
+  <rect x="960" y="280" width="380" height="70" rx="8" fill="#EAF5FE" stroke="#0176D3" stroke-width="2"/>
+  <text x="1150" y="310" text-anchor="middle" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Opportunity / Case</text>
+  <text x="1150" y="332" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="12">Salesforce engagement only</text>
+
+  <!-- Billing children -->
+  <line x1="180" y1="350" x2="180" y2="390" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <line x1="380" y1="350" x2="380" y2="390" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <rect x="40" y="390" width="280" height="90" rx="6" fill="#CFE8E2" stroke="#0B8A7A"/>
+  <text x="180" y="425" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Subscription / Entitlement</text>
+  <text x="180" y="448" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">Linked to Product / SKU</text>
+  <text x="180" y="468" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">MDM golden entitlement key</text>
+  <rect x="340" y="390" width="200" height="90" rx="6" fill="#CFE8E2" stroke="#0B8A7A"/>
+  <text x="440" y="430" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Contact (bill-to)</text>
+  <text x="440" y="452" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">Golden Contact</text>
+
+  <!-- SKU link -->
+  <line x1="180" y1="480" x2="180" y2="520" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <rect x="60" y="520" width="240" height="60" rx="6" fill="#FFF4E5" stroke="#DD7A01"/>
+  <text x="180" y="555" text-anchor="middle" fill="#181818" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Product / SKU</text>
+
+  <!-- Product org children -->
+  <line x1="600" y1="350" x2="600" y2="390" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <line x1="800" y1="350" x2="800" y2="390" stroke="#032D60" stroke-width="2" marker-end="url(#arrow7)"/>
+  <rect x="500" y="390" width="200" height="90" rx="6" fill="#BFE0D8" stroke="#0B8A7A"/>
+  <text x="600" y="425" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Users</text>
+  <text x="600" y="448" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">Contacts / Auth0</text>
+  <rect x="720" y="390" width="220" height="90" rx="6" fill="#BFE0D8" stroke="#0B8A7A"/>
+  <text x="830" y="425" text-anchor="middle" fill="#0B3B4D" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Devices</text>
+  <text x="830" y="448" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">ForgeEdge serials</text>
+  <text x="830" y="468" text-anchor="middle" fill="#3D5A5A" font-family="Arial, Helvetica, sans-serif" font-size="11">One golden Account bind</text>
+
+  <!-- Legend -->
+  <rect x="960" y="400" width="380" height="180" rx="8" fill="#FFFFFF" stroke="#747474"/>
+  <text x="980" y="430" fill="#032D60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Hierarchy rules (pilot)</text>
+  <text x="980" y="458" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="12">1. Enterprise parent wins commercial hierarchy</text>
+  <text x="980" y="482" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="12">2. PLG Stripe Account may merge under parent</text>
+  <text x="980" y="506" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="12">3. Device → exactly one golden Account</text>
+  <text x="980" y="530" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="12">4. Entitlements tied to billing entity</text>
+  <text x="980" y="558" fill="#0B8A7A" font-family="Arial, Helvetica, sans-serif" font-size="11">Teal = Informatica MDM masters</text>
+
+  <text x="700" y="720" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">Salesforce · Informatica (Informatica by Salesforce) engagement materials · NexusForge Systems is fictional for architecture demonstration · Not an endorsement by third parties</text>
+  <text x="700" y="742" text-anchor="middle" fill="#5C6B7A" font-family="Arial, Helvetica, sans-serif" font-size="10">Diagram 07 · MDM Logical Hierarchy · diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg</text>
+</svg>

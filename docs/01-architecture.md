@@ -7,7 +7,7 @@
 | Customer | NexusForge Systems, Inc. (fictional) |
 | Document | 01 — Architecture |
 | Version | 1.0 |
-| Related diagrams | `diagrams/svg/01`–`06` (see §8) |
+| Related diagrams | `diagrams/svg/01`–`09` (see §8) |
 
 ---
 
@@ -34,30 +34,7 @@ Audience: Enterprise Architect, CTO, CDO, security architecture, and delivery le
 
 ## 3. Logical architecture overview
 
-```text
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ SYSTEMS OF ENGAGEMENT                                                       │
-│  Salesforce Sales Cloud · Service Cloud · (Experience Cloud later)          │
-└───────────────────────────────┬─────────────────────────────────────────────┘
-                                │
-┌───────────────────────────────▼─────────────────────────────────────────────┐
-│ INTELLIGENCE & AGENTS                                                       │
-│  Salesforce Data Cloud (unified profiles, calculated insights)              │
-│  Salesforce Agentforce (CX + revenue pilots)                                │
-└───────────────────────────────┬─────────────────────────────────────────────┘
-                                │ governed APIs / certified data products
-┌───────────────────────────────▼─────────────────────────────────────────────┐
-│ TRUST FABRIC — Informatica IDMC (Informatica by Salesforce)                 │
-│  CDI / CAI · MDM · Data Quality · Catalog · Governance                      │
-└───┬───────────┬───────────┬───────────┬───────────┬─────────────────────────┘
-    │           │           │           │           │
-    ▼           ▼           ▼           ▼           ▼
- Stripe     NetSuite    Zendesk   ForgeObserve   Device Registry
-                                          │              │
-                                          └──────┬───────┘
-                                                 ▼
-                                    Analytics: Snowflake (read)
-```
+![NexusForge logical architecture — Salesforce engagement, Informatica IDMC trust fabric, domain systems of record, and analytics](../diagrams/svg/01-nexusforge-logical-architecture.svg)
 
 **Reference diagram:** [`diagrams/svg/01-nexusforge-logical-architecture.svg`](../diagrams/svg/01-nexusforge-logical-architecture.svg)
 
@@ -206,6 +183,9 @@ Catalog of patterns, SLAs, and correlation IDs: [03-integration-catalog.md](./03
 | [`diagrams/svg/04-nexusforge-agentforce-runtime-trust.svg`](../diagrams/svg/04-nexusforge-agentforce-runtime-trust.svg) | Agentforce runtime, grounding, policy denials, HITL |
 | [`diagrams/svg/05-nexusforge-security-identity-boundaries.svg`](../diagrams/svg/05-nexusforge-security-identity-boundaries.svg) | Okta/Auth0/Salesforce/IDMC trust boundaries and tenant isolation |
 | [`diagrams/svg/06-nexusforge-deploy-topology.svg`](../diagrams/svg/06-nexusforge-deploy-topology.svg) | Non-prod/prod deploy topology, Secure Agent, secrets, CI |
+| [`diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg`](../diagrams/svg/07-nexusforge-mdm-logical-hierarchy.svg) | MDM commercial / product hierarchy |
+| [`diagrams/svg/08-nexusforge-data-lineage-path.svg`](../diagrams/svg/08-nexusforge-data-lineage-path.svg) | Mandatory source→agent→audit lineage path |
+| [`diagrams/svg/09-nexusforge-subscription-sla-sequence.svg`](../diagrams/svg/09-nexusforge-subscription-sla-sequence.svg) | Subscription consistency sequence (&lt;5 min SLA) |
 
 All diagrams carry Salesforce and Informatica labeling per branding standards.
 
