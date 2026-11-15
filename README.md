@@ -8,6 +8,8 @@ Customer delivery architecture engagement for **NexusForge Systems** (fictional 
 | Platforms | Salesforce Sales Cloud, Service Cloud, Data Cloud, Agentforce · Informatica IDMC (CDI/CAI, MDM, DQ, Catalog, Governance) |
 | Tone | Principal solution architecture / SOW delivery — not interview framing |
 
+![NexusForge logical architecture — Salesforce engagement, Informatica IDMC trust fabric, domain systems of record, and analytics](diagrams/svg/01-nexusforge-logical-architecture.svg)
+
 ## Purpose
 
 Unify Account, Contact, Subscription/Entitlement, Product/SKU, and Device masters so Agentforce pilots (trial conversion, entitlement triage, proactive RMA, ARR briefs) consume **governed, certified data products** at runtime — not ad-hoc warehouse snapshots. Thesis: AI can scaffold pipelines in a day; it cannot replace the **trust fabric** (identity resolution, survivorship, policy, lineage, agent-time contracts). **Buy the control plane (Salesforce + IDMC); build the adapters** (ForgeObserve, Device Registry).
