@@ -187,7 +187,7 @@ Catalog of patterns, SLAs, and correlation IDs: [03-integration-catalog.md](./03
 | [`diagrams/svg/08-nexusforge-data-lineage-path.svg`](../diagrams/svg/08-nexusforge-data-lineage-path.svg) | Mandatory source→agent→audit lineage path |
 | [`diagrams/svg/09-nexusforge-subscription-sla-sequence.svg`](../diagrams/svg/09-nexusforge-subscription-sla-sequence.svg) | Subscription consistency sequence (&lt;5 min SLA) |
 
-All diagrams carry Salesforce and Informatica labeling per branding standards.
+All diagrams carry Salesforce and Informatica labeling and official marks from `branding/logos/`.
 
 ---
 

@@ -1,5 +1,11 @@
 # NexusForge Systems — Agentic Customer & Product Data Platform
 
+<p align="left">
+  <img src="branding/logos/salesforce-cloud-logo-normalized.png" alt="Salesforce" height="56" />
+  &nbsp;&nbsp;
+  <img src="branding/logos/informatica-from-salesforce-logo-normalized.png" alt="Informatica from Salesforce" height="48" />
+</p>
+
 Customer delivery architecture engagement for **NexusForge Systems** (fictional Technology customer: B2B SaaS observability **ForgeObserve** + edge appliances **ForgeEdge**) on **Salesforce** and **Informatica Intelligent Data Management Cloud (IDMC)**.
 
 | | |
@@ -57,7 +63,7 @@ Each diagram includes Salesforce + Informatica/IDMC corner stamps, engagement ti
 ## Repo layout
 
 - `README.md` — this file
-- `branding/` — logo placeholders + swap instructions
+- `branding/logos/` — official Salesforce + Informatica marks ([sources](branding/logos/SOURCES.md))
 - `diagrams/svg/` — branded architecture SVGs (01–09)
 - `demo-app/` — Account 360 + Agentforce simulator
 - `docs/` — architecture, pillars, deploy, acceptance
@@ -68,10 +74,11 @@ Each diagram includes Salesforce + Informatica/IDMC corner stamps, engagement ti
 
 ## Salesforce + Informatica branding
 
-Official product naming is required on docs, demo chrome, and diagrams. Logo binaries are not in-repo — use placeholders and swap licensed assets per [`branding/README.md`](branding/README.md):
+Official product naming and Brand Central / corporate marks are required on docs, demo chrome, and diagrams. Assets live in [`branding/logos/`](branding/logos/) (see [`branding/logos/README.md`](branding/logos/README.md) and [`SOURCES.md`](branding/logos/SOURCES.md)):
 
-- `branding/placeholders/salesforce-logo-placeholder.svg`
-- `branding/placeholders/informatica-logo-placeholder.svg`
+- `branding/logos/salesforce-cloud-logo.svg` (+ normalized PNG)
+- `branding/logos/informatica-from-salesforce-logo.svg` (+ normalized PNG) — official **Informatica from Salesforce** lockup
+- `branding/logos/informatica-logo.svg` — Informatica corporate mark alone
 
 ## Disclaimer
 

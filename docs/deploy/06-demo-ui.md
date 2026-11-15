@@ -96,7 +96,7 @@ Restrict access via VPN / IP allowlist. Do not expose to public internet.
 | Stale entitlement | Stripe CAI lag dashboard |
 | RMA enabled on quarantine | CAI filter bug—block demo; fix DQ gate |
 | CORS errors | Remote site / CAI CORS for demo origin |
-| Missing branding | `branding/` placeholders per README |
+| Missing branding | Official marks under `branding/logos/` per README |
 
 ---
 

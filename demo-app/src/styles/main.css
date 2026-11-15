@@ -78,14 +78,19 @@ a {
 
 .mark {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  min-width: 7.5rem;
-  padding: 0.35rem 0.7rem;
+  padding: 0.25rem 0.35rem;
   border-radius: 4px;
-  color: #fff;
   text-decoration: none;
   transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.mark img {
+  display: block;
+  width: auto;
+  max-width: 11rem;
+  height: auto;
 }
 
 .mark:hover {
@@ -93,25 +98,9 @@ a {
   box-shadow: var(--shadow);
 }
 
-.mark--sf {
-  background: var(--sf-blue);
-}
-
+.mark--sf,
 .mark--inf {
-  background: var(--inf-navy);
-  box-shadow: inset 0 0 0 1.5px var(--inf-teal-bright);
-}
-
-.mark strong {
-  font-size: 0.8rem;
-  letter-spacing: 0.02em;
-}
-
-.mark span {
-  font-size: 0.6rem;
-  opacity: 0.85;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  background: transparent;
 }
 
 .engagement-title {

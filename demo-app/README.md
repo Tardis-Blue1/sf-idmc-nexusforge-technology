@@ -43,7 +43,7 @@ Open `http://localhost:4173/` (serves `index.html`). Do not open the HTML file v
 
 ## Branding
 
-Header chrome uses labeled **Salesforce** and **Informatica / IDMC** placeholder marks (not official logo binaries). Swap licensed assets per `/branding/README.md`.
+Header chrome uses official **Salesforce** and **Informatica from Salesforce** marks from [`branding/logos/`](../branding/logos/).
 
 ## Disclaimer
 
