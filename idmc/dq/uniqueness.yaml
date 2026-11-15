@@ -1,0 +1,36 @@
+# Informatica IDMC — Data Quality rule pack: uniqueness
+apiVersion: idmc.informatica.com/v1
+kind: DQRulePack
+metadata:
+  name: uniqueness
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC Data Quality]
+spec:
+  rules:
+    - id: unique_golden_account_key
+      entity: customer
+      field: golden_account_key
+      assert: unique
+      severity: critical
+    - id: unique_device_serial
+      entity: device
+      field: serial
+      assert: unique
+      severity: critical
+    - id: unique_sku_code
+      entity: product
+      field: sku_code
+      assert: unique
+      severity: high
+    - id: unique_stripe_sub
+      entity: subscription
+      field: stripe_sub_id
+      assert: unique
+      severity: high
+    - id: unique_auth0_user
+      entity: contact
+      field: auth0_user_id
+      assert: unique
+      severity: high
+  success_metric:
+    duplicate_account_rate_top_2000_lt_pct: 2

@@ -1,0 +1,21 @@
+# Informatica IDMC — MDM model: customer
+apiVersion: idmc.informatica.com/v1
+kind: MDMModel
+metadata:
+  name: customer
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM, Salesforce]
+spec:
+  entity: customer
+  description: Golden customer master for NexusForge ForgeObserve / ForgeEdge.
+  attributes:
+    - {name: golden_account_key, type: string, pk: true}
+    - {name: legal_name, type: string}
+    - {name: forgeobserve_org_id, type: string}
+    - {name: netsuite_customer_id, type: string}
+    - {name: stripe_customer_id, type: string}
+    - {name: survivorship_source, type: string}
+    - {name: parent_golden_account_key, type: string}
+  crosswalk_publish:
+    - salesforce
+    - data_cloud

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img">
+  <title>NexusForge — Integration, MDM, Governance Pillars</title>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7FBFE"/><stop offset="100%" stop-color="#E7F0F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="920" fill="url(#bg2)"/>
+  <rect x="24" y="18" width="150" height="36" rx="4" fill="#0176D3"/>
+  <text x="99" y="41" text-anchor="middle" fill="#FFF" font-family="Arial,sans-serif" font-size="14" font-weight="700">Salesforce</text>
+  <rect x="186" y="18" width="170" height="36" rx="4" fill="#0B3B4D"/>
+  <text x="271" y="41" text-anchor="middle" fill="#FFF" font-family="Arial,sans-serif" font-size="13" font-weight="700">Informatica IDMC</text>
+  <text x="1380" y="40" text-anchor="end" fill="#5C6B7A" font-family="Arial,sans-serif" font-size="10">PLACEHOLDER LOGOS — branding/</text>
+
+  <text x="700" y="88" text-anchor="middle" fill="#032D60" font-family="Arial,sans-serif" font-size="22" font-weight="700">NexusForge Systems — Agentic Customer &amp; Product Data Platform</text>
+  <text x="700" y="112" text-anchor="middle" fill="#0176D3" font-family="Arial,sans-serif" font-size="15">Three Pillars in the Age of AI — Integration · MDM · Governance</text>
+
+  <!-- Pillar A -->
+  <rect x="40" y="150" width="420" height="680" rx="10" fill="#FFFFFF" stroke="#0176D3" stroke-width="2"/>
+  <rect x="40" y="150" width="420" height="56" rx="10" fill="#0176D3"/>
+  <text x="250" y="185" text-anchor="middle" fill="#FFF" font-family="Arial,sans-serif" font-size="16" font-weight="700">A · Data Integration</text>
+  <text x="60" y="240" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">Business drivers</text>
+  <text x="60" y="262" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">SaaS + appliance dual motion:</text>
+  <text x="60" y="280" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">CRM stage ≠ Stripe sub ≠ device</text>
+  <text x="60" y="298" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">activation ≠ ForgeObserve org.</text>
+  <text x="60" y="330" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">AI-agent implications</text>
+  <text x="60" y="352" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">Agents need contract-versioned,</text>
+  <text x="60" y="370" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">near-real-time tools—not warehouse</text>
+  <text x="60" y="388" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">snapshot “sync” for write-back.</text>
+  <text x="60" y="420" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">Salesforce + IDMC</text>
+  <text x="60" y="442" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• IDMC CAI/CDI fabric of record</text>
+  <text x="60" y="460" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Data Cloud ingestion + CDC</text>
+  <text x="60" y="478" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Platform Events / correlation IDs</text>
+  <text x="60" y="496" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Secure Agent for Device Registry</text>
+  <text x="60" y="528" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">Success metrics</text>
+  <text x="60" y="550" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• &lt;5 min median consistency</text>
+  <text x="60" y="568" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• ≥99.5% job success</text>
+  <text x="60" y="586" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• &lt;0.1% duplicate Account creates</text>
+  <text x="60" y="604" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• 100% pilot tools via governed APIs</text>
+  <rect x="60" y="640" width="380" height="150" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="250" y="675" text-anchor="middle" fill="#032D60" font-family="Arial,sans-serif" font-size="12" font-weight="700">Flows</text>
+  <text x="80" y="700" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">Stripe / NetSuite / Device CDC → CDI</text>
+  <text x="80" y="720" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">→ Salesforce upsert + Data Cloud</text>
+  <text x="80" y="740" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">Agentforce write-back → CAI APIs</text>
+  <text x="80" y="760" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">Observability: lag · poison · replay</text>
+
+  <!-- Pillar B -->
+  <rect x="490" y="150" width="420" height="680" rx="10" fill="#FFFFFF" stroke="#0B8A7A" stroke-width="2"/>
+  <rect x="490" y="150" width="420" height="56" rx="10" fill="#0B8A7A"/>
+  <text x="700" y="185" text-anchor="middle" fill="#FFF" font-family="Arial,sans-serif" font-size="16" font-weight="700">B · Master Data Management</text>
+  <text x="510" y="240" fill="#0B3B4D" font-family="Arial,sans-serif" font-size="13" font-weight="700">Business drivers</text>
+  <text x="510" y="262" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">Duplicate Accounts (PLG + enterprise);</text>
+  <text x="510" y="280" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">contacts as users + buyers; RMA</text>
+  <text x="510" y="298" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">device rebinds; SKU ≠ Stripe price ID.</text>
+  <text x="510" y="330" fill="#0B3B4D" font-family="Arial,sans-serif" font-size="13" font-weight="700">AI-agent implications</text>
+  <text x="510" y="352" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">Masters are the agent’s world model.</text>
+  <text x="510" y="370" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">Without golden Customer/Device/</text>
+  <text x="510" y="388" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">Entitlement, agents invent links.</text>
+  <text x="510" y="420" fill="#0B3B4D" font-family="Arial,sans-serif" font-size="13" font-weight="700">Salesforce + IDMC</text>
+  <text x="510" y="442" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Informatica MDM = system of reference</text>
+  <text x="510" y="460" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Salesforce = system of engagement</text>
+  <text x="510" y="478" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Data Cloud = activation / profiles</text>
+  <text x="510" y="496" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Bidirectional golden key sync</text>
+  <text x="510" y="528" fill="#0B3B4D" font-family="Arial,sans-serif" font-size="13" font-weight="700">Success metrics</text>
+  <text x="510" y="550" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Dup Account rate &lt;2% (top 2k logos)</text>
+  <text x="510" y="568" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Device–Account match ≥98%</text>
+  <text x="510" y="586" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Wrong-account agent actions = 0 UAT</text>
+  <rect x="510" y="640" width="380" height="150" rx="6" fill="#E6F4F1" stroke="#0B8A7A"/>
+  <text x="700" y="675" text-anchor="middle" fill="#0B3B4D" font-family="Arial,sans-serif" font-size="12" font-weight="700">Golden domains</text>
+  <text x="530" y="700" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">Account · Contact · Device · Product</text>
+  <text x="530" y="720" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">Subscription / Entitlement</text>
+  <text x="530" y="740" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">Survivorship: enterprise hierarchy wins;</text>
+  <text x="530" y="760" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">latest verified serial wins tenant bind</text>
+
+  <!-- Pillar C -->
+  <rect x="940" y="150" width="420" height="680" rx="10" fill="#FFFFFF" stroke="#032D60" stroke-width="2"/>
+  <rect x="940" y="150" width="420" height="56" rx="10" fill="#032D60"/>
+  <text x="1150" y="185" text-anchor="middle" fill="#FFF" font-family="Arial,sans-serif" font-size="16" font-weight="700">C · Data Governance</text>
+  <text x="960" y="240" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">Business drivers</text>
+  <text x="960" y="262" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">SOC 2 / ISO evidence; DPA; tenant</text>
+  <text x="960" y="280" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">isolation; export controls on SKUs.</text>
+  <text x="960" y="330" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">AI-agent implications</text>
+  <text x="960" y="352" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">Governance becomes continuous,</text>
+  <text x="960" y="370" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">machine-readable policy at discovery</text>
+  <text x="960" y="388" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">and action time—not PDF shelves.</text>
+  <text x="960" y="420" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">Salesforce + IDMC</text>
+  <text x="960" y="442" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• IDMC Catalog + Governance + DQ</text>
+  <text x="960" y="460" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Shield / Event Monitoring / audit</text>
+  <text x="960" y="478" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Data Cloud consent constructs</text>
+  <text x="960" y="496" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Deny raw Stripe PAN/token fields</text>
+  <text x="960" y="528" fill="#032D60" font-family="Arial,sans-serif" font-size="13" font-weight="700">Success metrics</text>
+  <text x="960" y="550" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• 100% agent products cataloged</text>
+  <text x="960" y="568" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Lineage completeness ≥95%</text>
+  <text x="960" y="586" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="12">• Zero critical DQ gate bypasses</text>
+  <rect x="960" y="640" width="380" height="150" rx="6" fill="#EEF1F6" stroke="#032D60"/>
+  <text x="1150" y="675" text-anchor="middle" fill="#032D60" font-family="Arial,sans-serif" font-size="12" font-weight="700">Certified data products</text>
+  <text x="980" y="700" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">dp.customer.golden</text>
+  <text x="980" y="720" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">dp.device.fleet</text>
+  <text x="980" y="740" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">dp.entitlement.active</text>
+  <text x="980" y="760" fill="#3E3E3C" font-family="Arial,sans-serif" font-size="11">+ billing_status (tokenized only)</text>
+
+  <text x="700" y="880" text-anchor="middle" fill="#5C6B7A" font-family="Arial,sans-serif" font-size="10">Salesforce · Informatica engagement materials · NexusForge Systems fictional · Diagram 02/06 · Integration-MDM-Governance pillars</text>
+</svg>

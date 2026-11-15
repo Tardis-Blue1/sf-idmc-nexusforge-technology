@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "sub_acme_enterprise",
+    "Tier__c": "Enterprise",
+    "StripeSubId__c": "sub_acme_enterprise",
+    "Status__c": "Active",
+    "GoldenEntitlementKey__c": "GEK-ACME-ENT-001",
+    "SKUCode__c": "FO-ENT-SAAS",
+    "ProductFamily__c": "SaaS",
+    "GoldenProductKey__c": "GPK-FO-ENT",
+    "correlationId": "nf-seed-20261115070748"
+  }
+]

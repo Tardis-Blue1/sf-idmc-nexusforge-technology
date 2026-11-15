@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NexusForge Systems · Agentic Customer &amp; Product Data Platform</title>
+    <meta
+      name="description"
+      content="Demo UI: Salesforce Account 360 and Agentforce action simulator with Informatica IDMC governance for NexusForge Systems (fictional)."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <header class="app-chrome" role="banner">
+      <div class="brand-lockup">
+        <a class="mark mark--sf" href="https://www.salesforce.com/" rel="noopener noreferrer" title="Salesforce placeholder mark">
+          <strong>Salesforce</strong>
+          <span>Logo placeholder</span>
+        </a>
+        <a class="mark mark--inf" href="https://www.informatica.com/" rel="noopener noreferrer" title="Informatica IDMC placeholder mark">
+          <strong>Informatica</strong>
+          <span>IDMC · placeholder</span>
+        </a>
+      </div>
+      <div class="engagement-title">
+        <p class="customer">NexusForge Systems</p>
+        <p class="subtitle">Agentic Customer &amp; Product Data Platform · Sales/Service/Data Cloud · Agentforce · IDMC</p>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero-strip" aria-label="Golden Account overview">
+        <article class="panel" id="account-panel">Loading Account 360…</article>
+        <article class="panel" id="subscription-panel">Loading subscription…</article>
+      </section>
+
+      <section class="grid-2">
+        <article class="panel" id="entitlements-panel"></article>
+        <article class="panel" id="products-panel"></article>
+      </section>
+
+      <section class="panel stack" style="margin-bottom: 1.25rem">
+        <div id="devices-panel"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="sim-heading">
+        <p class="eyebrow">Agentforce action simulator</p>
+        <h2 id="sim-heading">Propose · govern · write-back</h2>
+        <p style="margin: 0 0 1rem; color: var(--muted); max-width: 52rem; font-size: 0.92rem">
+          Runtime trust path: retrieve certified Data Cloud / IDMC products → Catalog policy check → allow, deny, or human-in-the-loop →
+          governed CAI write-back with correlation ID. Try the raw billing token path (must DENY) and the RMA quarantine flow.
+        </p>
+        <div class="sim-layout">
+          <div>
+            <h3>Scenarios</h3>
+            <ul class="scenario-list" id="scenario-list"></ul>
+            <button type="button" class="run-btn" id="run-btn" disabled>Run agent action</button>
+          </div>
+          <div>
+            <h3>Decision</h3>
+            <div class="result-panel" id="result-panel"></div>
+            <h3 style="margin-top: 1rem">Audit trail</h3>
+            <ul class="audit-log" id="audit-log"></ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          NexusForge Systems is a <strong>fictional customer</strong> for architecture demonstration. Not an endorsement by Salesforce,
+          Informatica, or third-party vendors named in sample integrations.
+        </p>
+        <p>
+          Official Salesforce and Informatica logo assets are placeholders — see
+          <code>branding/README.md</code>. Platform labeling: Salesforce · Informatica Intelligent Data Management Cloud (IDMC).
+        </p>
+      </footer>
+    </main>
+
+    <script src="./src/app.js" defer></script>
+  </body>
+</html>

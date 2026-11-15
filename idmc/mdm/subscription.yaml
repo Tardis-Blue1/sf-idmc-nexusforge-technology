@@ -1,0 +1,21 @@
+# Informatica IDMC — MDM model: subscription
+apiVersion: idmc.informatica.com/v1
+kind: MDMModel
+metadata:
+  name: subscription
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM, Salesforce]
+spec:
+  entity: subscription
+  description: Golden subscription master for NexusForge ForgeObserve / ForgeEdge.
+  attributes:
+    - {name: golden_entitlement_key, type: string, pk: true}
+    - {name: golden_account_key, type: string, fk: customer}
+    - {name: golden_product_key, type: string, fk: product}
+    - {name: stripe_sub_id, type: string}
+    - {name: tier, type: string}
+    - {name: status, type: string}
+    - {name: billing_status, type: string}
+  crosswalk_publish:
+    - salesforce
+    - data_cloud

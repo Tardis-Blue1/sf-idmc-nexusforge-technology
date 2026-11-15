@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="920" viewBox="0 0 1340 920" role="img" aria-labelledby="title desc">
+  <title id="title">NexusForge Systems — Security &amp; Identity Boundaries</title>
+  <desc id="desc">Identity planes, trust boundaries, tenant isolation, secrets, and agent tool least privilege across Salesforce and Informatica IDMC.</desc>
+  <defs>
+    <marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5C6B7A"/>
+    </marker>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4F8FB"/><stop offset="100%" stop-color="#E8F0F6"/>
+    </linearGradient>
+    <filter id="sh5"><feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="1340" height="920" fill="url(#bg5)"/>
+
+  <g transform="translate(24,16)">
+    <rect width="150" height="36" rx="4" fill="#0176D3"/>
+    <text x="75" y="16" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Salesforce</text>
+    <text x="75" y="29" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="7" fill="#BDD9F5">PLACEHOLDER</text>
+  </g>
+  <g transform="translate(186,16)">
+    <rect width="170" height="36" rx="4" fill="#0B3A53"/>
+    <rect x="1.5" y="1.5" width="167" height="33" rx="3" fill="none" stroke="#2BBBAD" stroke-width="1.2"/>
+    <text x="85" y="15" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Informatica</text>
+    <text x="85" y="28" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="600" fill="#2BBBAD">IDMC</text>
+  </g>
+
+  <text x="670" y="38" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#032D60">NexusForge Systems</text>
+  <text x="670" y="58" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#0176D3">Agentic Customer &amp; Product Data Platform — Security &amp; Identity Boundaries</text>
+  <text x="670" y="74" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#5C6B7A">Workforce · customer product · service principals · tenant isolation · agent least privilege</text>
+
+  <!-- Boundary zones -->
+  <rect x="40" y="100" width="400" height="280" rx="10" fill="#FFFFFF" stroke="#0176D3" stroke-width="2" stroke-dasharray="6 4" filter="url(#sh5)"/>
+  <text x="240" y="128" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#0176D3">BOUNDARY A — Workforce</text>
+  <rect x="60" y="150" width="170" height="90" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="145" y="185" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#032D60">Okta</text>
+  <text x="145" y="205" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">SSO · MFA · groups</text>
+  <rect x="250" y="150" width="170" height="90" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="335" y="178" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Salesforce users</text>
+  <text x="335" y="196" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Profiles / Perm sets</text>
+  <text x="335" y="212" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Least privilege</text>
+  <rect x="60" y="260" width="360" height="95" rx="6" fill="#F3F5F7" stroke="#5C6B7A"/>
+  <text x="240" y="290" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Human operators</text>
+  <text x="240" y="310" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">AE · CSM · Support · Data steward · Architect</text>
+  <text x="240" y="328" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">HITL approvals for refunds &amp; cross-Account rebinds</text>
+
+  <rect x="470" y="100" width="400" height="280" rx="10" fill="#FFFFFF" stroke="#0B7A6E" stroke-width="2" stroke-dasharray="6 4" filter="url(#sh5)"/>
+  <text x="670" y="128" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#0B7A6E">BOUNDARY B — Service / Integration</text>
+  <rect x="490" y="150" width="170" height="90" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="575" y="185" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B3A53">IDMC principals</text>
+  <text x="575" y="205" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">OAuth2 / private apps</text>
+  <rect x="680" y="150" width="170" height="90" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="765" y="178" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B3A53">Secrets Manager</text>
+  <text x="765" y="196" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">API keys · no repo secrets</text>
+  <text x="765" y="212" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">Rotation · audit</text>
+  <rect x="490" y="260" width="360" height="95" rx="6" fill="#0B3A53"/>
+  <text x="670" y="295" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">IDMC Secure Agent / runtime</text>
+  <text x="670" y="315" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#2BBBAD">Private connectivity to Device Registry</text>
+  <text x="670" y="333" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#8FB8C9">Network allow-lists · mTLS where required</text>
+
+  <rect x="900" y="100" width="400" height="280" rx="10" fill="#FFFFFF" stroke="#8A6D3B" stroke-width="2" stroke-dasharray="6 4" filter="url(#sh5)"/>
+  <text x="1100" y="128" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#8A6D3B">BOUNDARY C — Customer Product</text>
+  <rect x="920" y="150" width="170" height="90" rx="6" fill="#FBF6EC" stroke="#C4A35A"/>
+  <text x="1005" y="185" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#032D60">Auth0</text>
+  <text x="1005" y="205" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">Customer SSO</text>
+  <rect x="1110" y="150" width="170" height="90" rx="6" fill="#FBF6EC" stroke="#C4A35A"/>
+  <text x="1195" y="178" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">ForgeObserve</text>
+  <text x="1195" y="196" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Tenant org isolation</text>
+  <text x="1195" y="212" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Never crossed by agents</text>
+  <rect x="920" y="260" width="360" height="95" rx="6" fill="#F3F5F7" stroke="#5C6B7A"/>
+  <text x="1100" y="295" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Multi-tenant SaaS isolation</text>
+  <text x="1100" y="315" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">Agent tools scoped to Account hierarchy only</text>
+  <text x="1100" y="333" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#C62828">Hard fail on cross-tenant access attempts</text>
+
+  <!-- Agent / data plane -->
+  <rect x="40" y="410" width="1260" height="230" rx="10" fill="#FFFFFF" stroke="#032D60" stroke-width="1.5" filter="url(#sh5)"/>
+  <text x="60" y="438" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#032D60">DATA &amp; AGENT PLANE — least privilege overlays</text>
+
+  <rect x="60" y="460" width="280" height="150" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="200" y="490" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Salesforce security</text>
+  <text x="80" y="515" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Permission sets (Device/Entitlement)</text>
+  <text x="80" y="531" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Named Credentials for CAI</text>
+  <text x="80" y="547" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Event Monitoring / optional Shield</text>
+  <text x="80" y="563" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Agentforce action permissions</text>
+  <text x="80" y="579" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Field-level security</text>
+
+  <rect x="360" y="460" width="300" height="150" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="510" y="490" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B3A53">IDMC Governance policies</text>
+  <text x="380" y="515" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Deny raw Stripe token/PAN to agents</text>
+  <text x="380" y="531" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Allow billing_status certified product</text>
+  <text x="380" y="547" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Sensitivity: PII / tenant-secret / contractual</text>
+  <text x="380" y="563" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Lineage required for write-back</text>
+  <text x="380" y="579" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• DQ gate before agent consumption</text>
+
+  <rect x="680" y="460" width="300" height="150" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="830" y="490" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Agentforce tool scope</text>
+  <text x="700" y="515" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Read: certified Data Cloud fields only</text>
+  <text x="700" y="531" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Write: CAI APIs with corr-id</text>
+  <text x="700" y="547" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• No ad-hoc SQL / warehouse write</text>
+  <text x="700" y="563" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Tenant key validated on every call</text>
+  <text x="700" y="579" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Audit retain ≥1 year</text>
+
+  <rect x="1000" y="460" width="280" height="150" rx="6" fill="#FDECEA" stroke="#C62828"/>
+  <text x="1140" y="490" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#C62828">Hard controls</text>
+  <text x="1020" y="515" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• SOC 2 / ISO 27001 aligned</text>
+  <text x="1020" y="531" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• GDPR/CCPA via golden masters</text>
+  <text x="1020" y="547" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Export-control SKU flags</text>
+  <text x="1020" y="563" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• Automated tenant isolation tests</text>
+  <text x="1020" y="579" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">• No FedRAMP in year 1 (assumed)</text>
+
+  <!-- Trust flow strip -->
+  <rect x="40" y="665" width="1260" height="100" rx="8" fill="#0B3A53"/>
+  <text x="670" y="695" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Trust chain (every agent write-back)</text>
+  <text x="670" y="720" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#2BBBAD">AuthN (Okta/Auth0/principal)  →  AuthZ (perm sets + Catalog policy)  →  DQ certify  →  CAI action  →  Lineage + audit event</text>
+  <text x="670" y="742" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#8FB8C9">Break any link → DENY or escalate · agents never bypass the trust fabric</text>
+
+  <rect x="40" y="785" width="400" height="50" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="240" y="815" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="700" fill="#0B3A53">Buy control plane · build adapters only</text>
+  <rect x="460" y="785" width="400" height="50" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="660" y="815" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="700" fill="#032D60">DIY pipelines ≠ policy at runtime</text>
+  <rect x="880" y="785" width="420" height="50" rx="6" fill="#FBF6EC" stroke="#C4A35A"/>
+  <text x="1090" y="815" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="700" fill="#8A6D3B">Wrong-Account rebind = security incident</text>
+
+  <text x="670" y="870" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">NexusForge Systems is a fictional customer for architecture demonstration. Not an endorsement by Salesforce, Informatica, or third-party vendors named herein.</text>
+  <text x="670" y="888" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#8A96A3">Salesforce + Informatica IDMC  ·  Diagram 05/06  ·  Logo marks are placeholders — see branding/README.md</text>
+</svg>

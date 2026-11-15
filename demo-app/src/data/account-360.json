@@ -1,0 +1,152 @@
+{
+  "account": {
+    "goldenKey": "MDM-ACCT-NF-004821",
+    "name": "Northwind Robotics Holdings",
+    "type": "Enterprise",
+    "hierarchy": {
+      "parent": "Northwind Robotics Holdings",
+      "billingEntity": "Northwind Robotics US Billing LLC",
+      "productOrg": "nw-robotics-prod"
+    },
+    "salesforceId": "001xx000003NFG1",
+    "arr": 1820000,
+    "healthScore": 78,
+    "entitlementRisk": "Medium",
+    "billingStatus": "Current",
+    "csm": "Avery Chen",
+    "ae": "Jordan Blake",
+    "industry": "Industrial IoT / Robotics",
+    "region": "Americas",
+    "mergedFrom": [
+      { "source": "Self-serve PLG", "legacyId": "FO-ORG-99102", "status": "Survived into golden" },
+      { "source": "Enterprise sales", "legacyId": "SF-001xx000003NFG1", "status": "Survivorship winner (hierarchy)" }
+    ]
+  },
+  "contacts": [
+    {
+      "goldenKey": "MDM-CTC-8821",
+      "name": "Priya Natarajan",
+      "role": "VP Platform Engineering",
+      "email": "priya.natarajan@northwind-robotics.example",
+      "isBuyingCenter": true,
+      "isProductUser": true
+    },
+    {
+      "goldenKey": "MDM-CTC-8822",
+      "name": "Marcus Webb",
+      "role": "SRE Lead",
+      "email": "marcus.webb@northwind-robotics.example",
+      "isBuyingCenter": false,
+      "isProductUser": true
+    }
+  ],
+  "subscription": {
+    "product": "ForgeObserve Enterprise",
+    "tier": "Enterprise",
+    "previousTier": "Pro",
+    "seats": 240,
+    "stripeSubscriptionId": "sub_NF_demo_88421",
+    "renewalDate": "2027-03-15",
+    "featureFlags": ["slo-burn-alerts", "custom-retention-13m", "edge-correlate"]
+  },
+  "entitlements": [
+    {
+      "id": "ENT-1001",
+      "name": "ForgeObserve Enterprise seats",
+      "status": "Active",
+      "quantity": 240,
+      "source": "dp.entitlement.active",
+      "certified": true
+    },
+    {
+      "id": "ENT-1002",
+      "name": "ForgeEdge appliance support — Priority",
+      "status": "Active",
+      "quantity": 48,
+      "source": "dp.entitlement.active",
+      "certified": true
+    },
+    {
+      "id": "ENT-1003",
+      "name": "Premium RMA — next-business-day",
+      "status": "Active",
+      "quantity": 48,
+      "source": "dp.entitlement.active",
+      "certified": true
+    }
+  ],
+  "devices": [
+    {
+      "serial": "FE-AUS-77821",
+      "model": "ForgeEdge X200",
+      "firmware": "3.4.2",
+      "tenantBind": "nw-robotics-prod",
+      "accountGoldenKey": "MDM-ACCT-NF-004821",
+      "health": "Degraded",
+      "dqStatus": "Quarantined",
+      "dqReason": "Firmware 3.4.2 reported; registry expects 3.5.0 for serial family — mismatch",
+      "matchConfidence": 0.997
+    },
+    {
+      "serial": "FE-AUS-77822",
+      "model": "ForgeEdge X200",
+      "firmware": "3.5.0",
+      "tenantBind": "nw-robotics-prod",
+      "accountGoldenKey": "MDM-ACCT-NF-004821",
+      "health": "Healthy",
+      "dqStatus": "Certified",
+      "dqReason": null,
+      "matchConfidence": 0.999
+    },
+    {
+      "serial": "FE-TOR-44109",
+      "model": "ForgeEdge S100",
+      "firmware": "2.9.8",
+      "tenantBind": "nw-robotics-prod",
+      "accountGoldenKey": "MDM-ACCT-NF-004821",
+      "health": "Healthy",
+      "dqStatus": "Certified",
+      "dqReason": null,
+      "matchConfidence": 0.991
+    }
+  ],
+  "dataProducts": [
+    {
+      "id": "dp.customer.golden",
+      "owner": "CDO / MDM steward",
+      "sensitivity": "Confidential",
+      "sla": "p95 freshness < 5m",
+      "agentReadable": true
+    },
+    {
+      "id": "dp.entitlement.active",
+      "owner": "RevOps + Product",
+      "sensitivity": "Internal",
+      "sla": "p95 freshness < 5m",
+      "agentReadable": true
+    },
+    {
+      "id": "dp.device.fleet",
+      "owner": "Hardware ops",
+      "sensitivity": "Internal",
+      "sla": "p95 freshness < 10m",
+      "agentReadable": true
+    },
+    {
+      "id": "dp.billing.status",
+      "owner": "Finance systems",
+      "sensitivity": "Confidential",
+      "sla": "p95 freshness < 5m",
+      "agentReadable": true,
+      "fields": ["billing_status", "renewal_date", "arr_band"]
+    },
+    {
+      "id": "dp.billing.raw_token",
+      "owner": "Finance systems",
+      "sensitivity": "Restricted — PCI-adjacent",
+      "sla": "N/A for agents",
+      "agentReadable": false,
+      "fields": ["stripe_payment_method_token", "pan_last4_internal"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Example non-prod tfvars for NexusForge Systems.
+# Copy to nonprod.tfvars (gitignored) and adjust. Do not put secret values here.
+
+aws_region   = "us-east-1"
+environment  = "nonprod"
+project_prefix = "nexusforge"
+
+enable_secure_agent_log_bucket = true
+log_retention_days             = 30
+
+common_tags = {
+  CostCenter = "data-platform"
+  Owner      = "nexusforge-ea"
+}
+
+# Secret names only — populate values via AWS Secrets Manager / CI vault after apply.
+secret_name_prefixes = [
+  "nexusforge/nonprod/stripe_api",
+  "nexusforge/nonprod/salesforce_integration",
+  "nexusforge/nonprod/idmc_mdm",
+  "nexusforge/nonprod/idmc_dq",
+  "nexusforge/nonprod/device_registry",
+  "nexusforge/nonprod/zendesk",
+  "nexusforge/nonprod/agent_writeback_oauth"
+]

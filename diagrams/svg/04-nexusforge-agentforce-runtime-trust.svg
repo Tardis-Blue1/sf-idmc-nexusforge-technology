@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="940" viewBox="0 0 1340 940" role="img" aria-labelledby="title desc">
+  <title id="title">NexusForge Systems — Agentforce Runtime Trust Path</title>
+  <desc id="desc">Agentforce runtime: retrieve certified data products, propose actions, policy allow/deny, human-in-the-loop, governed write-back with lineage.</desc>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5C6B7A"/>
+    </marker>
+    <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0176D3"/>
+    </marker>
+    <marker id="art" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0B7A6E"/>
+    </marker>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B45309"/>
+    </marker>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4F8FB"/><stop offset="100%" stop-color="#E8F0F6"/>
+    </linearGradient>
+    <filter id="sh4"><feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="1340" height="940" fill="url(#bg4)"/>
+
+  <g transform="translate(24,16)">
+    <rect width="150" height="36" rx="4" fill="#0176D3"/>
+    <text x="75" y="16" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Salesforce</text>
+    <text x="75" y="29" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="7" fill="#BDD9F5">PLACEHOLDER</text>
+  </g>
+  <g transform="translate(186,16)">
+    <rect width="170" height="36" rx="4" fill="#0B3A53"/>
+    <rect x="1.5" y="1.5" width="167" height="33" rx="3" fill="none" stroke="#2BBBAD" stroke-width="1.2"/>
+    <text x="85" y="15" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Informatica</text>
+    <text x="85" y="28" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" font-weight="600" fill="#2BBBAD">IDMC</text>
+  </g>
+
+  <text x="670" y="38" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#032D60">NexusForge Systems</text>
+  <text x="670" y="58" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#0176D3">Agentic Customer &amp; Product Data Platform — Agentforce Runtime Trust</text>
+  <text x="670" y="74" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#5C6B7A">Grounding on Data Cloud + certified IDMC data products · policy at tool time · audited write-back</text>
+
+  <!-- Left: pilots -->
+  <rect x="40" y="100" width="260" height="520" rx="8" fill="#FFFFFF" stroke="#0176D3" stroke-width="1.5" filter="url(#sh4)"/>
+  <rect x="40" y="100" width="260" height="40" rx="8" fill="#0176D3"/>
+  <text x="170" y="125" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#fff">Pilot Agents</text>
+  <rect x="55" y="160" width="230" height="70" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="170" y="188" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Trial conversion coach</text>
+  <text x="170" y="206" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Sales · PLG → paid</text>
+  <rect x="55" y="245" width="230" height="70" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="170" y="273" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Entitlement triage</text>
+  <text x="170" y="291" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Service · support routing</text>
+  <rect x="55" y="330" width="230" height="70" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="170" y="358" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Proactive RMA</text>
+  <text x="170" y="376" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Service + Device master</text>
+  <rect x="55" y="415" width="230" height="70" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="170" y="443" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">ARR / renewal brief</text>
+  <text x="170" y="461" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Revenue · read-only first</text>
+  <rect x="55" y="505" width="230" height="90" rx="6" fill="#032D60"/>
+  <text x="170" y="540" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">Agentforce runtime</text>
+  <text x="170" y="560" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#BDD9F5">Grounding · Actions · Audit</text>
+  <text x="170" y="576" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#8FB8C9">p95 profile retrieve &lt;2s</text>
+
+  <!-- Center flow -->
+  <rect x="330" y="100" width="640" height="520" rx="8" fill="#FFFFFF" stroke="#5C6B7A" filter="url(#sh4)"/>
+  <text x="650" y="125" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#032D60">Runtime trust path (per tool call)</text>
+
+  <!-- Step boxes vertical -->
+  <rect x="370" y="145" width="560" height="55" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="390" y="168" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0176D3">① Retrieve</text>
+  <text x="390" y="185" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Data Cloud unified profile + certified products (dp.customer.golden, dp.entitlement.active, dp.device.fleet)</text>
+
+  <line x1="650" y1="200" x2="650" y2="218" stroke="#0176D3" stroke-width="1.5" marker-end="url(#arb)"/>
+
+  <rect x="370" y="218" width="560" height="55" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="390" y="241" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B7A6E">② Policy check (IDMC Catalog / Governance)</text>
+  <text x="390" y="258" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Sensitivity · purpose limitation · DQ certification · field allow-list for agent tools</text>
+
+  <line x1="650" y1="273" x2="650" y2="291" stroke="#0B7A6E" stroke-width="1.5" marker-end="url(#art)"/>
+
+  <!-- Branch allow / deny -->
+  <rect x="370" y="291" width="260" height="90" rx="6" fill="#E8F5E9" stroke="#2E7D32"/>
+  <text x="500" y="320" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#2E7D32">ALLOW</text>
+  <text x="500" y="340" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">billing_status · entitlement</text>
+  <text x="500" y="356" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">device serial (non-secret)</text>
+  <text x="500" y="372" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#2E7D32">Audit: policy allow</text>
+
+  <rect x="670" y="291" width="260" height="90" rx="6" fill="#FDECEA" stroke="#C62828"/>
+  <text x="800" y="320" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#C62828">DENY</text>
+  <text x="800" y="340" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">raw Stripe token / PAN</text>
+  <text x="800" y="356" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">tenant-secret fields</text>
+  <text x="800" y="372" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#C62828">Audit: policy hit · escalate</text>
+
+  <line x1="500" y1="381" x2="500" y2="410" stroke="#2E7D32" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="800" y1="381" x2="800" y2="410" stroke="#C62828" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="370" y="410" width="260" height="70" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="500" y="438" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">③ Propose action</text>
+  <text x="500" y="456" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">Open RMA · upgrade brief · triage</text>
+
+  <rect x="670" y="410" width="260" height="70" rx="6" fill="#FBF6EC" stroke="#C4A35A"/>
+  <text x="800" y="438" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#8A6D3B">③ Blocked path</text>
+  <text x="800" y="456" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">Use certified billing_status instead</text>
+
+  <line x1="500" y1="480" x2="500" y2="505" stroke="#0176D3" stroke-width="1.5" marker-end="url(#arb)"/>
+
+  <rect x="370" y="505" width="560" height="90" rx="6" fill="#F3F5F7" stroke="#5C6B7A"/>
+  <text x="390" y="530" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">④ Human-in-the-loop (when required)</text>
+  <text x="390" y="548" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Refunds above threshold · device rebind across Accounts · DQ quarantine release</text>
+  <text x="390" y="566" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">⑤ Write-back via governed CAI APIs · correlation ID · lineage source→MDM→DC→action</text>
+  <text x="390" y="582" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#0176D3">Event Monitoring + Agentforce audit · retention ≥1 year</text>
+
+  <!-- Right: trust fabric -->
+  <rect x="1000" y="100" width="300" height="520" rx="8" fill="#FFFFFF" stroke="#0B7A6E" stroke-width="1.5" filter="url(#sh4)"/>
+  <rect x="1000" y="100" width="300" height="40" rx="8" fill="#0B3A53"/>
+  <text x="1150" y="125" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#fff">Trust fabric inputs</text>
+
+  <rect x="1015" y="160" width="270" height="80" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="1150" y="185" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B3A53">IDMC Catalog</text>
+  <text x="1150" y="203" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">Owners · SLAs · tags</text>
+  <text x="1150" y="219" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">Agent consumption policies</text>
+
+  <rect x="1015" y="255" width="270" height="80" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="1150" y="280" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B3A53">IDMC DQ gates</text>
+  <text x="1150" y="298" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">Uncertified → block</text>
+  <text x="1150" y="314" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">Quarantine until steward</text>
+
+  <rect x="1015" y="350" width="270" height="80" rx="6" fill="#E6F7F5" stroke="#0B7A6E"/>
+  <text x="1150" y="375" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B3A53">MDM golden keys</text>
+  <text x="1150" y="393" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">Account / Device / Entitlement</text>
+  <text x="1150" y="409" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#3D5A66">No invented relationships</text>
+
+  <rect x="1015" y="445" width="270" height="80" rx="6" fill="#EAF5FE" stroke="#0176D3"/>
+  <text x="1150" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#032D60">Data Cloud</text>
+  <text x="1150" y="488" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Unified Individual / Account</text>
+  <text x="1150" y="504" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Calculated insights</text>
+
+  <rect x="1015" y="540" width="270" height="60" rx="6" fill="#0176D3"/>
+  <text x="1150" y="565" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">CAI write APIs</text>
+  <text x="1150" y="582" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#BDD9F5">Tenant isolation enforced</text>
+
+  <!-- Scenario callouts -->
+  <rect x="40" y="645" width="610" height="140" rx="8" fill="#FFFFFF" stroke="#C62828" filter="url(#sh4)"/>
+  <text x="60" y="670" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#C62828">Demo scenario — Governance DENY</text>
+  <text x="60" y="692" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Agent requests raw Stripe billing token field → Catalog policy DENY.</text>
+  <text x="60" y="708" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Agent falls back to certified billing_status data product. Audit shows policy hit.</text>
+  <text x="60" y="724" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">No PAN/token ever exposed to Agentforce tool context.</text>
+  <text x="60" y="748" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="700" fill="#032D60">Outcome: zero critical governance bypass · measurable policy telemetry</text>
+  <text x="60" y="766" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Acceptance scenario §11.3</text>
+
+  <rect x="670" y="645" width="630" height="140" rx="8" fill="#FFFFFF" stroke="#0B7A6E" filter="url(#sh4)"/>
+  <text x="690" y="670" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#0B7A6E">Demo scenario — Device RMA (DQ + HITL)</text>
+  <text x="690" y="692" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Firmware + serial mismatch → DQ quarantine → agent escalates to steward.</text>
+  <text x="690" y="708" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">After fix + recertify: RMA action ALLOWED via CAI with correlation ID.</text>
+  <text x="690" y="724" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#3E4A56">Cross-Account rebind always requires human approval.</text>
+  <text x="690" y="748" font-family="Helvetica,Arial,sans-serif" font-size="9" font-weight="700" fill="#032D60">Outcome: wrong-account device actions = 0 in UAT pack</text>
+  <text x="690" y="766" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#5C6B7A">Acceptance scenario §11.4</text>
+
+  <text x="670" y="825" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="700" fill="#0B3A53">Governance is runtime, not documentation — agents amplify blast radius without machine-enforceable contracts.</text>
+  <text x="670" y="860" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#5C6B7A">NexusForge Systems is a fictional customer for architecture demonstration. Not an endorsement by Salesforce, Informatica, or third-party vendors named herein.</text>
+  <text x="670" y="878" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#8A96A3">Salesforce + Informatica IDMC  ·  Diagram 04/06  ·  Logo marks are placeholders — see branding/README.md</text>
+  <text x="670" y="896" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8" fill="#8A96A3">Agentforce · Data Cloud · IDMC Catalog/Governance/DQ/MDM/CAI</text>
+</svg>

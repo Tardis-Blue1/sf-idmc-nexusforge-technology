@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Acme Observability Co",
+    "GoldenAccountKey__c": "GAK-ACME-001",
+    "ForgeObserveOrgId__c": "org_acme_001",
+    "NetSuiteCustomerId__c": "NS-10001",
+    "MDMSurvivorshipSource__c": "netsuite_erp",
+    "correlationId": "nf-seed-20261115070748"
+  },
+  {
+    "Name": "Acme Observability Co (Self-Serve)",
+    "GoldenAccountKey__c": "GAK-ACME-PLG-001",
+    "ForgeObserveOrgId__c": "org_acme_plg",
+    "MDMSurvivorshipSource__c": "forgeobserve_control_plane",
+    "correlationId": "nf-seed-20261115070748"
+  }
+]

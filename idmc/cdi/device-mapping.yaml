@@ -1,0 +1,39 @@
+# Informatica IDMC — CDI mapping spec — Device / Asset
+apiVersion: idmc.informatica.com/v1
+kind: CDIMapping
+metadata:
+  name: device-mapping
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC CDI, Salesforce]
+spec:
+  source_systems: [forgeedge_device_registry, forgeobserve_control_plane]
+  target:
+    mdm_entity: device
+    salesforce_object: Device__c
+  field_map:
+    - source: device_registry.serial
+      target_mdm: serial
+      target_sf: Serial__c
+    - source: device_registry.firmware
+      target_mdm: firmware
+      target_sf: Firmware__c
+    - source: device_registry.tenant_org_id
+      target_mdm: tenant_org_id
+      target_sf: TenantOrgId__c
+    - source: device_registry.status
+      target_mdm: status
+      target_sf: Status__c
+    - source: mdm.device.golden_key
+      target_mdm: golden_device_key
+      target_sf: GoldenDeviceKey__c
+    - source: mdm.device.match_confidence
+      target_mdm: match_confidence
+      target_sf: MDMMatchConfidence__c
+    - source: mdm.customer.golden_key
+      target_mdm: golden_account_key
+      target_sf: Account__r.GoldenAccountKey__c
+  idempotency:
+    keys: [golden_device_key, serial]
+  correlation_id_field: correlation_id
+  referential_integrity:
+    - device.golden_account_key must resolve to customer.golden_account_key

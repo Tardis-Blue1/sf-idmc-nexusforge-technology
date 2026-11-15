@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "FE-10001",
+    "Serial__c": "FE-10001",
+    "Firmware__c": "3.2.1",
+    "TenantOrgId__c": "org_acme_001",
+    "Status__c": "Active",
+    "GoldenDeviceKey__c": "GDK-FE-10001",
+    "MDMMatchConfidence__c": 99.2,
+    "correlationId": "nf-seed-20261115070748"
+  }
+]

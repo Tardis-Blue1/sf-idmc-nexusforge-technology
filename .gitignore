@@ -1,0 +1,24 @@
+# Terraform
+**/.terraform/
+**/tfplan*
+**/*.tfstate*
+**/envs/*.tfvars
+!**/envs/*.tfvars.example
+
+# Secrets / local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+
+# Salesforce
+.sfdx/
+.sf/
+**/scripts/soql/

@@ -1,0 +1,15 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true,
+      "package": "NexusForge Agent Data Platform",
+      "versionName": "Winter 26",
+      "versionNumber": "1.0.0.NEXT"
+    }
+  ],
+  "name": "nexusforge-agentic-data-platform",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0"
+}

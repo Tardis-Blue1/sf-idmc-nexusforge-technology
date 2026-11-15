@@ -1,0 +1,59 @@
+# Informatica IDMC — Catalog data products
+apiVersion: idmc.informatica.com/v1
+kind: CatalogDataProducts
+metadata:
+  name: data-products
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC Catalog, Salesforce Agentforce]
+spec:
+  products:
+    - id: dp.customer.golden
+      name: Golden Customer
+      owner: cdo-data-platform
+      sla:
+        freshness_minutes: 15
+        availability_pct: 99.9
+      sensitivity: confidential
+      certified: true
+      domains: [customer]
+      fields:
+        - golden_account_key
+        - legal_name
+        - forgeobserve_org_id
+        - survivorship_source
+        - hierarchy_path
+      consumers: [agentforce_cx, agentforce_revenue, salesforce_service]
+    - id: dp.device.fleet
+      name: Device Fleet
+      owner: vp-customer-experience
+      sla:
+        freshness_minutes: 30
+        availability_pct: 99.5
+      sensitivity: confidential
+      certified: true
+      domains: [device]
+      fields:
+        - golden_device_key
+        - serial
+        - firmware
+        - status
+        - match_confidence
+        - golden_account_key
+      consumers: [agentforce_cx, rma_assistant]
+    - id: dp.entitlement.active
+      name: Active Entitlements
+      owner: revops
+      sla:
+        freshness_minutes: 5
+        availability_pct: 99.9
+      sensitivity: restricted
+      certified: true
+      domains: [subscription]
+      fields:
+        - golden_entitlement_key
+        - golden_account_key
+        - tier
+        - status
+        - billing_status
+      consumers: [agentforce_cx, agentforce_revenue]
+      notes: billing_status is tokenized; raw Stripe tokens excluded

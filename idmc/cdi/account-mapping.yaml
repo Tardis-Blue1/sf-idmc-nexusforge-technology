@@ -1,0 +1,35 @@
+# Informatica IDMC — Cloud Data Integration (CDI) mapping spec
+# NexusForge Systems: Account / Customer
+apiVersion: idmc.informatica.com/v1
+kind: CDIMapping
+metadata:
+  name: account-mapping
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC CDI, Salesforce]
+spec:
+  source_systems: [salesforce_crm, netsuite_erp, stripe_billing, forgeobserve_control_plane]
+  target:
+    mdm_entity: customer
+    salesforce_object: Account
+  field_map:
+    - source: salesforce.Account.Id
+      target_mdm: source_crm_id
+      target_sf: Id
+    - source: salesforce.Account.Name
+      target_mdm: legal_name
+      target_sf: Name
+    - source: netsuite.customer.internal_id
+      target_mdm: netsuite_customer_id
+      target_sf: NetSuiteCustomerId__c
+    - source: forgeobserve.org.id
+      target_mdm: forgeobserve_org_id
+      target_sf: ForgeObserveOrgId__c
+    - source: mdm.customer.golden_key
+      target_mdm: golden_account_key
+      target_sf: GoldenAccountKey__c
+    - source: mdm.customer.survivorship_source
+      target_mdm: survivorship_source
+      target_sf: MDMSurvivorshipSource__c
+  idempotency:
+    keys: [golden_account_key, forgeobserve_org_id, netsuite_customer_id]
+  correlation_id_field: correlation_id

@@ -1,0 +1,48 @@
+# Informatica IDMC — Catalog / Governance policies for agent consumption
+apiVersion: idmc.informatica.com/v1
+kind: CatalogPolicies
+metadata:
+  name: policies
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC Governance, Salesforce Agentforce]
+spec:
+  policies:
+    - id: deny-raw-stripe-tokens-to-agents
+      effect: deny
+      principals: [agentforce_cx, agentforce_revenue, agentforce_rma]
+      actions: [read, write]
+      resources:
+        fields:
+          - stripe_payment_method_token
+          - stripe_pan_token
+          - raw_card_fingerprint
+          - stripe.payment_method.token
+          - stripe.card.pan_token
+      reason: Agents must use certified billing_status from dp.entitlement.active
+      audit: required
+    - id: allow-certified-data-products
+      effect: allow
+      principals: [agentforce_cx, agentforce_revenue, agentforce_rma]
+      actions: [read]
+      resources:
+        data_products:
+          - dp.customer.golden
+          - dp.device.fleet
+          - dp.entitlement.active
+      condition: product.certified == true
+    - id: hitl-device-rebind-across-accounts
+      effect: require_human_approval
+      principals: [agentforce_rma]
+      actions: [device_rebind]
+      condition: target_golden_account_key != source_golden_account_key
+    - id: hitl-refund-over-threshold
+      effect: require_human_approval
+      principals: [agentforce_cx, agentforce_revenue]
+      actions: [refund]
+      condition: amount_usd > 500
+    - id: tenant-isolation
+      effect: deny
+      principals: [agentforce_cx, agentforce_revenue, agentforce_rma]
+      actions: [read, write]
+      condition: request.tenant_org_id != record.tenant_org_id
+      reason: Multi-tenant SaaS isolation must never be violated by agent tools

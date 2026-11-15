@@ -1,0 +1,20 @@
+# Informatica IDMC — MDM model: contact
+apiVersion: idmc.informatica.com/v1
+kind: MDMModel
+metadata:
+  name: contact
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM, Salesforce]
+spec:
+  entity: contact
+  description: Golden contact master for NexusForge ForgeObserve / ForgeEdge.
+  attributes:
+    - {name: golden_contact_key, type: string, pk: true}
+    - {name: golden_account_key, type: string, fk: customer}
+    - {name: email, type: string}
+    - {name: last_name, type: string}
+    - {name: auth0_user_id, type: string}
+    - {name: product_user_flag, type: boolean}
+  crosswalk_publish:
+    - salesforce
+    - data_cloud

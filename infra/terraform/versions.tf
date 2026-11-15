@@ -1,0 +1,24 @@
+terraform {
+  required_version = ">= 1.5.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = merge(var.common_tags, {
+      Project     = "nexusforge-agentic-data-platform"
+      Customer    = "NexusForge-Systems"
+      Salesforce  = "true"
+      Informatica = "IDMC"
+      ManagedBy   = "terraform"
+    })
+  }
+}

@@ -1,0 +1,21 @@
+# Informatica IDMC — MDM model: device
+apiVersion: idmc.informatica.com/v1
+kind: MDMModel
+metadata:
+  name: device
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM, Salesforce]
+spec:
+  entity: device
+  description: Golden device master for NexusForge ForgeObserve / ForgeEdge.
+  attributes:
+    - {name: golden_device_key, type: string, pk: true}
+    - {name: serial, type: string}
+    - {name: firmware, type: string}
+    - {name: tenant_org_id, type: string}
+    - {name: golden_account_key, type: string, fk: customer}
+    - {name: status, type: string}
+    - {name: match_confidence, type: number}
+  crosswalk_publish:
+    - salesforce
+    - data_cloud

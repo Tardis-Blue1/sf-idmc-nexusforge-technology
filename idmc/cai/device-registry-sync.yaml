@@ -1,0 +1,87 @@
+# Informatica IDMC — Cloud Application Integration (CAI)
+# NexusForge Systems: ForgeEdge Device Registry → MDM Device → Salesforce Device__c
+apiVersion: idmc.informatica.com/v1
+kind: CAIProcess
+metadata:
+  name: device-registry-sync
+  customer: NexusForge Systems
+  platforms:
+    - Informatica IDMC CAI
+    - Salesforce Service Cloud
+  labels:
+    domain: device
+    product_line: ForgeEdge
+spec:
+  description: >
+    Sync ForgeEdge device serial, firmware, and tenant binding into Informatica MDM
+    Device master and Salesforce Device__c with match confidence.
+  trigger:
+    type: cdc_or_schedule
+    schedule_cron: "*/10 * * * *"
+    source: forgeedge-device-registry
+  correlation:
+    header: X-NexusForge-Correlation-Id
+    generate_if_missing: true
+    propagate_to:
+      - mdm
+      - salesforce
+      - dq
+  connectors:
+    - name: device_registry_api
+      type: rest
+      secret_ref: secrets/nexusforge/nonprod/device_registry
+      private_connectivity: true
+    - name: idmc_mdm
+      type: mdm_saas
+      secret_ref: secrets/nexusforge/nonprod/idmc_mdm
+    - name: idmc_dq
+      type: data_quality
+      secret_ref: secrets/nexusforge/nonprod/idmc_dq
+    - name: salesforce_crm
+      type: salesforce
+      secret_ref: secrets/nexusforge/nonprod/salesforce_integration
+  steps:
+    - id: fetch_device_batch
+      action: rest_get
+      path: /v1/devices
+      page_size: 200
+    - id: ensure_correlation
+      action: set_correlation_id
+    - id: dq_gate
+      action: run_rule_pack
+      packs:
+        - completeness
+        - validity
+        - referential-integrity
+      on_fail: quarantine
+    - id: match_account
+      action: mdm_lookup
+      entity: customer
+      keys: [tenant_org_id, forgeobserve_org_id]
+      output: golden_account_key
+    - id: upsert_device_master
+      action: mdm_upsert
+      entity: device
+      match_rules: match-rules.yaml#device
+      golden_key_field: golden_device_key
+      idempotent: true
+      outputs: [golden_device_key, match_confidence]
+    - id: upsert_salesforce_device
+      action: salesforce_apex
+      class: NexusForgeMDMKeyService.upsertDeviceByGoldenKey
+      payload_map:
+        goldenKey: $.golden_device_key
+        serial: $.serial
+        firmware: $.firmware
+        tenantOrgId: $.tenant_org_id
+        status: $.status
+        matchConfidence: $.match_confidence
+        correlationId: $.correlation_id
+    - id: emit_metrics
+      action: observe
+      metrics: [device_match_confidence_p50, quarantine_count]
+  error_handling:
+    poison_queue: nexusforge-device-registry-dlq
+    quarantine_dataset: dq_quarantine_device
+  sla:
+    active_fleet_match_confidence_pct: 98

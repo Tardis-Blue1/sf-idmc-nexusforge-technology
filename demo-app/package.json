@@ -1,0 +1,14 @@
+{
+  "name": "nexusforge-agentic-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NexusForge Systems — Salesforce Account 360 + Agentforce simulator with Informatica IDMC governance (static demo)",
+  "scripts": {
+    "start": "npx --yes serve -l 4173 .",
+    "serve": "npx --yes serve -l 4173 .",
+    "python": "python3 -m http.server 4173"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

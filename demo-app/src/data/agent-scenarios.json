@@ -1,0 +1,85 @@
+{
+  "scenarios": [
+    {
+      "id": "propose-upgrade-brief",
+      "label": "Propose ARR / renewal brief",
+      "description": "Agentforce revenue assistant drafts a renewal brief from certified entitlement and billing_status products.",
+      "action": "generate_renewal_brief",
+      "requires": ["dp.customer.golden", "dp.entitlement.active", "dp.billing.status"],
+      "expected": "allow",
+      "hitl": false
+    },
+    {
+      "id": "read-raw-billing-token",
+      "label": "Request raw Stripe billing token",
+      "description": "Agent attempts to read stripe_payment_method_token — Catalog policy must DENY.",
+      "action": "read_field",
+      "field": "stripe_payment_method_token",
+      "dataProduct": "dp.billing.raw_token",
+      "expected": "deny",
+      "hitl": false,
+      "fallback": "dp.billing.status"
+    },
+    {
+      "id": "open-rma-quarantined",
+      "label": "Open RMA on quarantined device",
+      "description": "Proactive RMA for FE-AUS-77821 while DQ quarantine is active — escalate / block until steward release.",
+      "action": "open_rma",
+      "serial": "FE-AUS-77821",
+      "expected": "escalate",
+      "hitl": true
+    },
+    {
+      "id": "open-rma-certified",
+      "label": "Open RMA after steward fix",
+      "description": "After DQ release and firmware certify, RMA is ALLOWED via governed CAI with correlation ID.",
+      "action": "open_rma",
+      "serial": "FE-AUS-77821",
+      "assumeDqReleased": true,
+      "expected": "allow",
+      "hitl": false
+    },
+    {
+      "id": "cross-account-rebind",
+      "label": "Rebind device to different Account",
+      "description": "Cross-Account device rebind always requires human-in-the-loop approval.",
+      "action": "rebind_device",
+      "serial": "FE-TOR-44109",
+      "targetAccount": "MDM-ACCT-OTHER-999",
+      "expected": "hitl",
+      "hitl": true
+    },
+    {
+      "id": "entitlement-triage",
+      "label": "Entitlement-aware case triage",
+      "description": "Service agent routes case using certified entitlements (Priority appliance support).",
+      "action": "triage_case",
+      "requires": ["dp.entitlement.active", "dp.device.fleet"],
+      "expected": "allow",
+      "hitl": false
+    }
+  ],
+  "policyRules": [
+    {
+      "id": "POL-AGENT-NO-RAW-TOKEN",
+      "effect": "deny",
+      "resource": "dp.billing.raw_token.*",
+      "principal": "agentforce.*",
+      "reason": "PCI-adjacent / contractual — agents use dp.billing.status only"
+    },
+    {
+      "id": "POL-DQ-GATE",
+      "effect": "deny_until_certified",
+      "resource": "dp.device.fleet",
+      "condition": "dqStatus == Quarantined",
+      "reason": "DQ gate before agent write actions on device"
+    },
+    {
+      "id": "POL-CROSS-ACCT-HITL",
+      "effect": "require_hitl",
+      "resource": "device.rebind",
+      "condition": "targetAccount != currentGoldenAccount",
+      "reason": "Cross-Account rebind is a security and revenue control"
+    }
+  ]
+}

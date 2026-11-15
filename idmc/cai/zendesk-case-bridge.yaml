@@ -1,0 +1,77 @@
+# Informatica IDMC — Cloud Application Integration (CAI)
+# NexusForge Systems: Zendesk ↔ Salesforce Case bridge with golden Account/Contact
+apiVersion: idmc.informatica.com/v1
+kind: CAIProcess
+metadata:
+  name: zendesk-case-bridge
+  customer: NexusForge Systems
+  platforms:
+    - Informatica IDMC CAI
+    - Salesforce Service Cloud
+  labels:
+    domain: support
+spec:
+  description: >
+    Bridge Zendesk tickets to Salesforce Cases using Informatica MDM golden
+    Account/Contact keys. Avoids duplicate Accounts from email-only matching.
+  trigger:
+    type: webhook
+    webhook_path: /nexusforge/zendesk/ticket
+  correlation:
+    header: X-NexusForge-Correlation-Id
+    generate_if_missing: true
+    propagate_to:
+      - mdm
+      - salesforce
+      - zendesk_side_conversation
+  connectors:
+    - name: zendesk_support
+      type: rest
+      secret_ref: secrets/nexusforge/nonprod/zendesk
+    - name: idmc_mdm
+      type: mdm_saas
+      secret_ref: secrets/nexusforge/nonprod/idmc_mdm
+    - name: salesforce_crm
+      type: salesforce
+      secret_ref: secrets/nexusforge/nonprod/salesforce_integration
+  steps:
+    - id: receive_ticket
+      action: parse_payload
+      outputs: [ticket_id, requester_email, org_external_id, subject, priority]
+    - id: ensure_correlation
+      action: set_correlation_id
+    - id: resolve_contact
+      action: mdm_lookup
+      entity: contact
+      keys: [email, auth0_user_id]
+      output: golden_contact_key
+    - id: resolve_account
+      action: mdm_lookup
+      entity: customer
+      keys: [zendesk_org_id, forgeobserve_org_id]
+      output: golden_account_key
+    - id: upsert_salesforce_case
+      action: salesforce_rest
+      object: Case
+      operation: upsert
+      external_id_field: NexusForge_ZendeskTicketId__c
+      # Field may be added in a later metadata drop; stub uses Subject + AccountId
+      payload_map:
+        Subject: $.subject
+        Priority: $.priority
+        AccountId: $.salesforce_account_id
+        ContactId: $.salesforce_contact_id
+        Origin: Zendesk
+        Description: "Synced via Informatica IDMC CAI; correlation={$.correlation_id}"
+    - id: writeback_zendesk_tags
+      action: rest_put
+      path: /api/v2/tickets/{ticket_id}
+      body:
+        tags: ["sf_bridged", "mdm_resolved"]
+        external_id: $.salesforce_case_id
+    - id: emit_metrics
+      action: observe
+      metrics: [bridge_success, unresolved_account]
+  error_handling:
+    poison_queue: nexusforge-zendesk-bridge-dlq
+    on_unresolved_account: create_steward_task

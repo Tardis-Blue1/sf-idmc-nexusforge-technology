@@ -1,0 +1,34 @@
+# Informatica IDMC — MDM hierarchy
+apiVersion: idmc.informatica.com/v1
+kind: MDMHierarchy
+metadata:
+  name: hierarchy
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM, Salesforce]
+spec:
+  name: nexusforge-customer-hierarchy
+  levels:
+    - name: parent_account
+      entity: customer
+      description: Enterprise parent logo
+    - name: billing_entity
+      entity: customer
+      parent: parent_account
+      description: Child billing entities / subsidiaries
+    - name: product_org
+      entity: customer
+      parent: billing_entity
+      link_attribute: forgeobserve_org_id
+      description: ForgeObserve product orgs under billing entity
+  device_binding:
+    entity: device
+    links_to: product_org
+    via: golden_account_key
+  subscription_binding:
+    entity: subscription
+    links_to: billing_entity
+    via: golden_account_key
+  salesforce_alignment:
+    object: Account
+    parent_field: ParentId
+    golden_key_field: GoldenAccountKey__c

@@ -1,0 +1,37 @@
+# Informatica IDMC — CDI mapping spec — Contact / User
+apiVersion: idmc.informatica.com/v1
+kind: CDIMapping
+metadata:
+  name: contact-mapping
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC CDI, Salesforce]
+spec:
+  source_systems: [salesforce_crm, auth0_product, forgeobserve_control_plane, zendesk_support]
+  target:
+    mdm_entity: contact
+    salesforce_object: Contact
+  field_map:
+    - source: salesforce.Contact.Id
+      target_mdm: source_crm_id
+      target_sf: Id
+    - source: salesforce.Contact.Email
+      target_mdm: email
+      target_sf: Email
+    - source: salesforce.Contact.LastName
+      target_mdm: last_name
+      target_sf: LastName
+    - source: auth0.user.user_id
+      target_mdm: auth0_user_id
+      target_sf: Auth0UserId__c
+    - source: forgeobserve.user.is_product_user
+      target_mdm: product_user_flag
+      target_sf: ProductUserFlag__c
+    - source: mdm.contact.golden_key
+      target_mdm: golden_contact_key
+      target_sf: GoldenContactKey__c
+    - source: mdm.customer.golden_key
+      target_mdm: golden_account_key
+      target_sf: Account.GoldenAccountKey__c
+  idempotency:
+    keys: [golden_contact_key, auth0_user_id, email]
+  correlation_id_field: correlation_id

@@ -1,0 +1,6 @@
+**/*-meta.xml.bak
+**/jsconfig.json
+**/.eslintrc.json
+**/.prettierignore
+**/.prettierrc
+**/tsconfig.json

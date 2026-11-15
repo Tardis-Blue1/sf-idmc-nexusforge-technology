@@ -1,0 +1,47 @@
+# Informatica IDMC — MDM match rules
+apiVersion: idmc.informatica.com/v1
+kind: MDMMatchRules
+metadata:
+  name: match-rules
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM]
+spec:
+  customer:
+    - rule: exact_forgeobserve_org
+      weight: 100
+      fields: [forgeobserve_org_id]
+    - rule: exact_netsuite_id
+      weight: 95
+      fields: [netsuite_customer_id]
+    - rule: fuzzy_legal_name_domain
+      weight: 70
+      fields: [legal_name]
+      threshold: 0.92
+  contact:
+    - rule: exact_auth0
+      weight: 100
+      fields: [auth0_user_id]
+    - rule: exact_email_account
+      weight: 90
+      fields: [email, golden_account_key]
+  device:
+    - rule: exact_serial
+      weight: 100
+      fields: [serial]
+    - rule: serial_tenant_bind
+      weight: 85
+      fields: [serial, tenant_org_id]
+  product:
+    - rule: exact_sku
+      weight: 100
+      fields: [sku_code]
+    - rule: exact_stripe_price
+      weight: 95
+      fields: [stripe_price_id]
+  subscription:
+    - rule: exact_stripe_sub
+      weight: 100
+      fields: [stripe_sub_id]
+    - rule: account_product_active
+      weight: 80
+      fields: [golden_account_key, golden_product_key, status]

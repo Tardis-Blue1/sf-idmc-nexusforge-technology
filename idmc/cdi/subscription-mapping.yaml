@@ -1,0 +1,39 @@
+# Informatica IDMC — CDI mapping spec — Subscription / Entitlement
+apiVersion: idmc.informatica.com/v1
+kind: CDIMapping
+metadata:
+  name: subscription-mapping
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC CDI, Salesforce]
+spec:
+  source_systems: [stripe_billing, netsuite_erp]
+  target:
+    mdm_entity: subscription
+    salesforce_object: Entitlement__c
+  field_map:
+    - source: stripe.subscription.id
+      target_mdm: stripe_sub_id
+      target_sf: StripeSubId__c
+    - source: stripe.subscription.status
+      target_mdm: status
+      target_sf: Status__c
+    - source: stripe.subscription.tier
+      target_mdm: tier
+      target_sf: Tier__c
+    - source: mdm.subscription.golden_key
+      target_mdm: golden_entitlement_key
+      target_sf: GoldenEntitlementKey__c
+    - source: mdm.customer.golden_key
+      target_mdm: golden_account_key
+      target_sf: Account__r.GoldenAccountKey__c
+    - source: mdm.product.golden_key
+      target_mdm: golden_product_key
+      target_sf: ProductSKU__r.GoldenProductKey__c
+  # Never map raw Stripe payment method / PAN tokens into Salesforce or agent products
+  excluded_source_fields:
+    - stripe.payment_method.token
+    - stripe.card.pan_token
+    - stripe.card.fingerprint_raw
+  idempotency:
+    keys: [golden_entitlement_key, stripe_sub_id]
+  correlation_id_field: correlation_id

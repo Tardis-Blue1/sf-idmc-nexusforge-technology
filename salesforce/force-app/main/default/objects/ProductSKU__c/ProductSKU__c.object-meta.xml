@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>ForgeObserve SaaS or ForgeEdge appliance SKU catalog entry.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <label>Product SKU</label>
+    <nameField>
+        <label>Product SKU Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Product SKUs</pluralLabel>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

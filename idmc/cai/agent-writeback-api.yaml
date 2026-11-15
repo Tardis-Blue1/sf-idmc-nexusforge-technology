@@ -1,0 +1,86 @@
+# Informatica IDMC — Cloud Application Integration (CAI)
+# NexusForge Systems: Agentforce write-back API (governed)
+apiVersion: idmc.informatica.com/v1
+kind: CAIProcess
+metadata:
+  name: agent-writeback-api
+  customer: NexusForge Systems
+  platforms:
+    - Informatica IDMC CAI
+    - Informatica IDMC Catalog / Governance
+    - Salesforce Agentforce
+  labels:
+    domain: agent_runtime
+spec:
+  description: >
+    Governed API facade for Salesforce Agentforce actions (entitlement updates,
+    device RMA proposals). Enforces Catalog policies, correlation IDs, and
+    human-in-the-loop thresholds. Denies raw Stripe token field access.
+  trigger:
+    type: rest_api
+    path: /nexusforge/agent/writeback
+    auth: oauth2_client_credentials
+    secret_ref: secrets/nexusforge/nonprod/agent_writeback_oauth
+  correlation:
+    header: X-NexusForge-Correlation-Id
+    required: true
+    propagate_to:
+      - audit_log
+      - salesforce
+      - mdm
+  connectors:
+    - name: idmc_catalog_policy
+      type: governance
+      policy_pack: catalog/policies.yaml
+    - name: idmc_mdm
+      type: mdm_saas
+      secret_ref: secrets/nexusforge/nonprod/idmc_mdm
+    - name: salesforce_crm
+      type: salesforce
+      secret_ref: secrets/nexusforge/nonprod/salesforce_integration
+  steps:
+    - id: validate_correlation
+      action: require_header
+      header: X-NexusForge-Correlation-Id
+      on_missing: reject_400
+    - id: authorize_data_product
+      action: policy_check
+      allowed_products:
+        - dp.customer.golden
+        - dp.device.fleet
+        - dp.entitlement.active
+      denied_fields:
+        - stripe_payment_method_token
+        - stripe_pan_token
+        - raw_card_fingerprint
+    - id: route_action
+      action: switch
+      field: $.action
+      cases:
+        update_entitlement_tier:
+          next: upsert_entitlement
+        propose_device_rma:
+          next: rma_gate
+        read_billing_status:
+          next: return_certified_billing_status
+    - id: upsert_entitlement
+      action: salesforce_apex
+      class: NexusForgeEntitlementService.upsertEntitlement
+      require_hitl_when:
+        refund_amount_gt: 500
+    - id: rma_gate
+      action: dq_and_policy
+      require_device_account_match_confidence_gte: 98
+      on_fail: escalate_steward
+    - id: return_certified_billing_status
+      action: read_data_product
+      product: dp.entitlement.active
+      fields: [billing_status, tier, status]
+    - id: audit
+      action: write_audit
+      fields: [correlation_id, agent_id, action, allow_deny, data_products]
+  error_handling:
+    policy_deny_status: 403
+    audit_retention_days: 365
+  sla:
+    agent_profile_retrieve_p95_ms: 2000

@@ -1,0 +1,35 @@
+# Informatica IDMC — Data Quality rule pack: completeness
+apiVersion: idmc.informatica.com/v1
+kind: DQRulePack
+metadata:
+  name: completeness
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC Data Quality]
+spec:
+  rules:
+    - id: customer_golden_key_present
+      entity: customer
+      field: golden_account_key
+      assert: not_null
+      severity: critical
+    - id: device_serial_present
+      entity: device
+      field: serial
+      assert: not_null
+      severity: critical
+    - id: device_account_present
+      entity: device
+      field: golden_account_key
+      assert: not_null
+      severity: critical
+    - id: subscription_stripe_or_golden
+      entity: subscription
+      assert: any_not_null
+      fields: [golden_entitlement_key, stripe_sub_id]
+      severity: high
+    - id: contact_email_or_auth0
+      entity: contact
+      assert: any_not_null
+      fields: [email, auth0_user_id]
+      severity: medium
+  gate: block_agent_consumption_on_critical

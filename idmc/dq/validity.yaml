@@ -1,0 +1,40 @@
+# Informatica IDMC — Data Quality rule pack: validity
+apiVersion: idmc.informatica.com/v1
+kind: DQRulePack
+metadata:
+  name: validity
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC Data Quality]
+spec:
+  rules:
+    - id: product_family_enum
+      entity: product
+      field: product_family
+      assert: in_set
+      values: [SaaS, Appliance]
+      severity: high
+    - id: device_status_enum
+      entity: device
+      field: status
+      assert: in_set
+      values: [Active, Provisioned, RMA, Decommissioned, Quarantined]
+      severity: medium
+    - id: firmware_semverish
+      entity: device
+      field: firmware
+      assert: regex
+      pattern: '^[0-9]+\\.[0-9]+(\\.[0-9]+)?([-+].*)?$'
+      severity: medium
+      on_fail: quarantine
+    - id: email_format
+      entity: contact
+      field: email
+      assert: email
+      severity: medium
+    - id: match_confidence_range
+      entity: device
+      field: match_confidence
+      assert: between
+      min: 0
+      max: 100
+      severity: high

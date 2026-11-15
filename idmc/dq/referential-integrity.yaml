@@ -1,0 +1,42 @@
+# Informatica IDMC — Data Quality rule pack: referential integrity
+apiVersion: idmc.informatica.com/v1
+kind: DQRulePack
+metadata:
+  name: referential-integrity
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC Data Quality]
+spec:
+  rules:
+    - id: device_must_map_to_account
+      description: ForgeEdge device must resolve to a golden Account/Customer
+      child_entity: device
+      child_field: golden_account_key
+      parent_entity: customer
+      parent_field: golden_account_key
+      assert: foreign_key_exists
+      severity: critical
+      on_fail: quarantine
+    - id: subscription_must_map_to_account
+      child_entity: subscription
+      child_field: golden_account_key
+      parent_entity: customer
+      parent_field: golden_account_key
+      assert: foreign_key_exists
+      severity: critical
+    - id: subscription_must_map_to_product
+      child_entity: subscription
+      child_field: golden_product_key
+      parent_entity: product
+      parent_field: golden_product_key
+      assert: foreign_key_exists
+      severity: high
+    - id: contact_must_map_to_account
+      child_entity: contact
+      child_field: golden_account_key
+      parent_entity: customer
+      parent_field: golden_account_key
+      assert: foreign_key_exists
+      severity: high
+  agent_gate:
+    deny_actions: [propose_device_rma, open_case_on_device]
+    unless: device_must_map_to_account.pass

@@ -1,0 +1,41 @@
+# Informatica IDMC — MDM survivorship
+apiVersion: idmc.informatica.com/v1
+kind: MDMSurvivorship
+metadata:
+  name: survivorship
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC MDM]
+spec:
+  customer:
+    legal_name:
+      strategy: source_trust
+      trust_order: [netsuite_erp, salesforce_crm, forgeobserve_control_plane]
+    forgeobserve_org_id:
+      strategy: most_recent_verified
+      source: forgeobserve_control_plane
+    hierarchy:
+      strategy: enterprise_account_wins
+      note: Parent enterprise Account wins over self-serve PLG duplicates
+  contact:
+    email:
+      strategy: most_recent_verified
+    product_user_flag:
+      strategy: boolean_or
+      sources: [forgeobserve_control_plane, auth0_product]
+  device:
+    tenant_org_id:
+      strategy: latest_verified_serial_binding
+      note: Latest verified serial wins device tenant binding after RMA
+    firmware:
+      strategy: most_recent
+  product:
+    stripe_price_id:
+      strategy: source_trust
+      trust_order: [stripe_billing, salesforce_cpq_lite]
+  subscription:
+    status:
+      strategy: source_trust
+      trust_order: [stripe_billing, netsuite_erp]
+    billing_status:
+      strategy: derived_certified
+      note: Tokenized status only; never raw Stripe tokens

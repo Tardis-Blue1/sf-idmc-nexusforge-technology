@@ -1,0 +1,29 @@
+# Informatica IDMC — CDI mapping spec — Product / SKU
+apiVersion: idmc.informatica.com/v1
+kind: CDIMapping
+metadata:
+  name: product-mapping
+  customer: NexusForge Systems
+  platforms: [Informatica IDMC CDI, Salesforce]
+spec:
+  source_systems: [stripe_billing, netsuite_erp, salesforce_cpq_lite]
+  target:
+    mdm_entity: product
+    salesforce_object: ProductSKU__c
+  field_map:
+    - source: catalog.sku_code
+      target_mdm: sku_code
+      target_sf: SKUCode__c
+    - source: stripe.price.id
+      target_mdm: stripe_price_id
+      target_sf: StripePriceId__c
+    - source: catalog.product_family
+      target_mdm: product_family
+      target_sf: ProductFamily__c
+      values: [SaaS, Appliance]
+    - source: mdm.product.golden_key
+      target_mdm: golden_product_key
+      target_sf: GoldenProductKey__c
+  idempotency:
+    keys: [golden_product_key, sku_code, stripe_price_id]
+  correlation_id_field: correlation_id
